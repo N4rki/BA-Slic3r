@@ -209,6 +209,11 @@ SLAPrint::write_svg(const std::string &outputfile) const
 {
     const Sizef3 size = this->bb.size();
     const double support_material_radius = sm_pillars_radius();
+	
+	string strMytestString(colours[1]);
+    cout << strMytestString;
+    string output(colours[1]);
+    cout << output;
     
     FILE* f = fopen(outputfile.c_str(), "w");
     fprintf(f,
@@ -234,8 +239,10 @@ SLAPrint::write_svg(const std::string &outputfile) const
                 std::string pd = this->_SVG_path_d(*it);
                 
                 fprintf(f,"\t\t<path d=\"%s\" style=\"fill: %s; stroke: %s; stroke-width: %s; fill-type: evenodd\" slic3r:area=\"%0.4f\" />\n",
-                    pd.c_str(), "white", "black", "0", unscale(unscale(it->area()))
+                    pd.c_str(), colours[count].c_str(), "black", "0", unscale(unscale(it->area()))
                 );
+                if (count < 6)
+                  count++;
             }
         } else {
             // Perimeters.
