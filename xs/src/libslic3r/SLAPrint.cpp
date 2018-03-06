@@ -7,6 +7,7 @@
 #include <iostream>
 #include <complex>
 #include <cstdio>
+#include <string>
 
 namespace Slic3r {
 
@@ -210,10 +211,12 @@ SLAPrint::write_svg(const std::string &outputfile) const
     const Sizef3 size = this->bb.size();
     const double support_material_radius = sm_pillars_radius();
 	
-	string strMytestString(colours[1]);
-    cout << strMytestString;
-    string output(colours[1]);
-    cout << output;
+	std::string colours[7] = { "navy", "green", "blue", "red", "yellow", "orange", "grey" };
+	
+	std::string strMytestString(colours[1]);
+    std::cout << strMytestString<<std::endl;
+    std::string output(colours[1]);
+    std::cout << output;
     
     FILE* f = fopen(outputfile.c_str(), "w");
     fprintf(f,
@@ -234,6 +237,7 @@ SLAPrint::write_svg(const std::string &outputfile) const
         );
         
         if (layer.solid) {
+			int count = 0;
             const ExPolygons &slices = layer.slices.expolygons;
             for (ExPolygons::const_iterator it = slices.begin(); it != slices.end(); ++it) {
                 std::string pd = this->_SVG_path_d(*it);
