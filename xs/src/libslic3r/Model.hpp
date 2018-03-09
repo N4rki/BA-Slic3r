@@ -38,13 +38,13 @@ typedef std::vector<ModelInstance*> ModelInstancePtrs;
 class Model
 {
     public:
-    ModelMaterialMap materials;
-    ///< Materials are owned by a model and referenced by objects through t_model_material_id.
-    ///< Single material may be shared by multiple models.
-
     ModelObjectPtrs objects;
     ///< Objects are owned by a model. Each object may have multiple instances
     ///< , each instance having its own transformation (shift, scale, rotation).
+
+    ModelMaterialMap materials;
+    ///< Materials are owned by a model and referenced by objects through t_model_material_id.
+    ///< Single material may be shared by multiple models.
 
     std::map<std::string, std::string> metadata;
     ///< Model metadata <name, value>, this is needed for 3MF format read/write.
@@ -268,6 +268,7 @@ class ModelObject
     t_layer_height_ranges layer_height_ranges; ///< Variation of a layer thickness for spans of Z coordinates.
 
     int part_number; ///< It's used for the 3MF items part numbers in the build element.
+
     LayerHeightSpline layer_height_spline;     ///< Spline based variations of layer thickness for interactive user manipulation
 
     Pointf3 origin_translation;

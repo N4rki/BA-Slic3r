@@ -858,7 +858,7 @@ sub _repaint {
     # draw bed
     if ($self->config2->{show_bed}) {
         $dc->SetPen(Wx::Pen->new(wxRED, 2, wxSOLID));
-        $dc->SetBrush(Wx::Brush->new(wxWHITE, wxTRANSPARENT));
+        $dc->SetBrush(Wx::Brush->new(wxGREEN, wxTRANSPARENT));
         
         # draw contour
         my $bed_polygon = Slic3r::Polygon->new_scale(@{$self->config->bed_shape});
@@ -948,7 +948,7 @@ sub _paint_polygon {
     my ($self, $polygon, $dc) = @_;
     
     if ($polygon->is_counter_clockwise) {
-        $dc->SetBrush(Wx::Brush->new(wxWHITE, wxSOLID));
+        $dc->SetBrush(Wx::Brush->new(wxBLUE, wxSOLID));
     } else {
         $dc->SetBrush(Wx::Brush->new(wxBLACK, wxSOLID));
     }

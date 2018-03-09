@@ -16,6 +16,7 @@ typedef std::vector<ExPolygon> ExPolygons;
 class ExPolygon
 {
     public:
+    int part_number = 1;
     Polygon contour;
     Polygons holes;
     ExPolygon() {};
@@ -67,6 +68,12 @@ operator+(ExPolygons src1, const ExPolygons &src2) {
     return src1;
 };
 
+inline ExPolygons
+operator+=(ExPolygons src1, const ExPolygons &src2) {
+	src1 = src1 + src2;
+    return src1;
+};
+
 std::ostream& operator <<(std::ostream &s, const ExPolygons &expolygons);
 
 }
@@ -112,8 +119,8 @@ namespace boost { namespace polygon {
             return expolygon;
         }
     };
-    
-    
+
+
     template <>
     struct geometry_concept<ExPolygon> { typedef polygon_with_holes_concept type; };
 
@@ -140,7 +147,7 @@ namespace boost { namespace polygon {
               return t;
          }
     };
-    
+
     //first we register CPolygonSet as a polygon set
     template <>
     struct geometry_concept<ExPolygons> { typedef polygon_set_concept type; };
