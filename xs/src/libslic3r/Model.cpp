@@ -420,10 +420,9 @@ ModelMaterial::apply(const t_model_material_attributes &attributes)
 
 
 ModelObject::ModelObject(Model *model)
-: part_number(0), _bounding_box_valid(false), model(model)
+: part_number(-1), _bounding_box_valid(false), model(model)
 {
-	std::cout<< "Just set part number of newly created ModelObject partnumber to 0" << std::endl;
-
+	std::cout<< "Just set part number of newly created ModelObject to -1" << std::endl;
 }
 
 ModelObject::ModelObject(Model *model, const ModelObject &other, bool copy_volumes)

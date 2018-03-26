@@ -16,7 +16,6 @@ typedef std::vector<ExPolygon> ExPolygons;
 class ExPolygon
 {
     public:
-    int part_number = 1;
     Polygon contour;
     Polygons holes;
     ExPolygon() {};
@@ -51,6 +50,7 @@ class ExPolygon
     void triangulate_p2t(Polygons* polygons) const;
     Lines lines() const;
     std::string dump_perl() const;
+    int part_number;
 };
 
 inline Polygons

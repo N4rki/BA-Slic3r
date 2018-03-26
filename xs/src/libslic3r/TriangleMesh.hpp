@@ -20,7 +20,6 @@ typedef std::vector<TriangleMesh*> TriangleMeshPtrs;
 class TriangleMesh
 {
     public:
-	int part_number = 2;
     TriangleMesh();
     TriangleMesh(const Pointf3s &points, const std::vector<Point3> &facets);
     TriangleMesh(const TriangleMesh &other);

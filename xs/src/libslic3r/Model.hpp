@@ -453,6 +453,7 @@ class ModelVolume
     friend class ModelObject;
     public:
 
+    int part_number;
     std::string name;   ///< Name of this ModelVolume object
     TriangleMesh mesh;  ///< The triangular model.
     DynamicPrintConfig config;
@@ -490,7 +491,7 @@ class ModelVolume
     ///< Parent object owning this ModelVolume.
     ModelObject* object;
     ///< The id of the this ModelVolume
-    t_model_material_id _material_id;
+    t_model_material_id _material_id = "3";
 
     /// Constructor
     /// \param object ModelObject* pointer to the owner ModelObject
@@ -510,6 +511,8 @@ class ModelVolume
     /// Swap attributes between another ModelVolume object
     /// \param other ModelVolume the other volume object
     void swap(ModelVolume &other);
+
+
 };
 
 /// A single instance of a ModelObject.

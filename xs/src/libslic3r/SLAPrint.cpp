@@ -22,6 +22,7 @@ SLAPrint::slice()
 	this->bb = mesh.bounding_box();
 
 	if (this->config.raft_layers > 0) {
+		std::cout<< "bb box is offset because raft layers were found"<< std::endl;
 		this->bb.min.x -= this->config.raft_offset.value;
 		this->bb.min.y -= this->config.raft_offset.value;
 		this->bb.max.x += this->config.raft_offset.value;
@@ -52,90 +53,92 @@ SLAPrint::slice()
 
 	// Go through each ModelObject
 	int ModelObjectCounter = 0;
+	int totalModelVolumeCounter = 0;
 	for (ModelObjectPtrs::const_iterator o = this->model->objects.begin(); o != this->model->objects.end(); ++o) {
 		std::cout<< "ModelObjectCounter: "<< ModelObjectCounter << std::endl;
 		ModelObjectCounter++;
 
-		//merge its volumes
-		TriangleMesh singleMesh = (*o)->mesh();
+		// Perform all steps for each instance of the current ModelObject
+		for (ModelInstancePtrs::const_iterator i = (*o)->instances.begin(); i != (*o)->instances.end(); ++i) {
 
-		if (((*o)->part_number) == -1)
-			std::cout<< "The ModelObject's part number was not initialized (-1): "<< (*o)->part_number << std::endl;
-		if (((*o)->part_number) > 19)
-			std::cout<< "The ModelObject's part number is higher than the maximum 19: "<< (*o)->part_number << std::endl;
+			int ModelVolumeCounter = 0;
+			for (ModelVolumePtrs::const_iterator v = (*o)->volumes.begin(); v != (*o)->volumes.end(); ++v) {
+				std::cout<< "totalModelVolumeCounter: "<< totalModelVolumeCounter << std::endl;
+				totalModelVolumeCounter++;
+				ModelVolumeCounter++;
 
-		// assign 3mf object id from ModelObject to Triangle mesh
-		if ((*o)->part_number != -1) {
-			singleMesh.part_number = (*o)->part_number;
-
-			std::cout<< "Just parsed Partnumber from ModelObject to Mesh "<< (*o)->part_number << std::endl;
-		}
-
-		// perform slicing and generate layers
-		{
+				// Create Mesh for each ModelVolume of each ModelInstance and apply the respective instance transformations
+				TriangleMesh InstanceMesh = (*v)->mesh;
+				(*i)->transform_mesh(&InstanceMesh);
 
 
-			// slice at z values
-			std::vector<ExPolygons> slices;
-			TriangleMeshSlicer<Z>(&singleMesh).slice(slice_z, &slices);
+				// assign 3mf object id from ModelObject to ModelVolume in case the 3mf importer found a part number.
+				if ((*o)->part_number != -1) {
+					(*v)->part_number = (*o)->part_number;
+					std::cout<< "Just parsed 3MF Partnumber from ModelObject to ModelVolume: "<< (*v)->part_number << std::endl;
+				}
+
+				// Printing out all defined keys in dynamic config
+				t_config_option_keys keyList = (*v)->config.keys();
+				std::cout<< "Here are all DynamicConfig keys: ";
+				for (auto &key : keyList){
+					std::cout<< key<< "; ";
+				}
+				std::cout<< std::endl;
+
+				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0){
+
+					int extruderNumber = (*v)->config.option("extruder")->getInt();
+					std::cout<< "Extruder number is greater than 0: "<< extruderNumber << std::endl;
+					(*v)->part_number = extruderNumber;
+					std::cout<< "Therfore parsed Extruder id to volume part number: "<< extruderNumber << std::endl;
+				}
 
 
-			// assign 3mf part id from Triangle mesh to the Expolygons. Note that slices is a vector of Expolygon vectors.
-			for (auto &slice : slices)
-			{
-				for (ExPolygons::iterator it = slice.begin(); it != slice.end(); ++it) {
+				if (((*v)->part_number) == -1){
+					std::cout<< "The ModelVolume's part number was not initialized yet (-1) and is set to 0. " << std::endl;
+					(*v)->part_number = 0;
+				}
 
-					if (singleMesh.part_number != -1) {
-						it->part_number = singleMesh.part_number;
-						std::cout<< "Just parsed Partnumber from Mesh to Expolygon: "<< it->part_number << std::endl;
+				if (((*v)->part_number) > 19) {
+					std::cout<< "The ModelVolume's part number is higher than the maximum 19: "<< (*v)->part_number << std::endl;
+					(*v)->part_number = 19;
+					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << "in ModelObject" << ModelObjectCounter << "was set to 19"<< std::endl;
+				}
+
+				// perform slicing and generate layers
+				{
+					// slice at z values
+					std::vector<ExPolygons> slices;
+					TriangleMeshSlicer<Z>(&InstanceMesh).slice(slice_z, &slices);
+
+
+					// assign 3mf part id from Triangle mesh to the Expolygons. Note that slices is a vector of Expolygon vectors.
+					for (auto &slice : slices)
+					{
+						for (ExPolygons::iterator it = slice.begin(); it != slice.end(); ++it) {
+
+							if ((*v)->part_number >= 0) {
+								//std::string id = (*v)->_material_id;
+								///it->part_number = atoi(id.c_str());
+								it->part_number = (*v)->part_number;
+								std::cout<< "Just parsed part number from Volume to ExPolygon: "<< it->part_number << std::endl;
+							}
+						}
+					}
+
+					// assign created ExPolygons to this objects ExPolygons
+					if (totalModelVolumeCounter == 0) {
+						for (size_t i = 0; i < slices.size(); ++i)
+							this->layers[i].slices.expolygons = slices[i];
+					} else {
+						for (size_t i = 0; i < slices.size(); ++i)
+							this->layers[i].slices << slices[i];
 					}
 				}
 			}
-			/*
-			// assign 3mf part id from Triangle mesh to the Expolygons. Note that slices is a vector of Expolygon vectors.
-			std::for_each(slices.begin(), slices.end(),[](ExPolygons * slice)
-			{
-				for (ExPolygons::const_iterator it = slice->begin(); it != slice->end(); ++it) {
-					ExPolygon current = *it;
-					current.part_number = singleMesh.part_number;
-				}
-			}
-			);
-
-
-			// assign 3mf part id from Triangle mesh to the Expolygons. Note that slices is a vector of Expolygon vectors.
-			for (const auto &slice = slices.begin(); slice != slices.end(); ++slice)
-			{
-				for (ExPolygons::const_iterator it = slice->begin(); it != slice->end(); ++it) {
-					ExPolygon current = *it;
-					current.part_number = singleMesh.part_number;
-				}
-			}
-			 */
-			// assign created ExPolygons to this objects ExPolygons
-			if (ModelObjectCounter == 0) {
-				for (size_t i = 0; i < slices.size(); ++i)
-					this->layers[i].slices.expolygons = slices[i];
-			} else {
-				for (size_t i = 0; i < slices.size(); ++i)
-					this->layers[i].slices << slices[i];
-			}
-
-			/*
-				for (ExPolygons::const_iterator it = slices[i].begin(); it != slices[i].end(); ++it) {
-					ExPolygon current = *it;
-					current.part_number = singleMesh.part_number;
-					std::cout<< "Just parsed Partnumber directly from Mesh to SLAPrints ExPolygons"<< (*it).part_number << std::endl;
-
-				}
-			} */
-
-
 		}
 	}
-
-
-
 
 	// generate infill
 	if (this->config.fill_density < 100) {
@@ -294,11 +297,6 @@ SLAPrint::write_svg(const std::string &outputfile) const
 
 	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "grey", "navy", "darkred", "wheat", "hotpink", "beige", "crimson", "limegreen", "dimgray", "lightsteelblue", "deepskyblue", "linen", "aliceblue", "gold"};
 
-	std::string strMytestString(colours[1]);
-	std::cout << strMytestString<<std::endl;
-	std::string output(colours[1]);
-	std::cout << output <<std::endl;
-
 	FILE* f = fopen(outputfile.c_str(), "w");
 	fprintf(f,
 			"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n"
@@ -324,7 +322,7 @@ SLAPrint::write_svg(const std::string &outputfile) const
 			for (ExPolygons::const_iterator it = slices.begin(); it != slices.end(); ++it) {
 				std::string pd = this->_SVG_path_d(*it);
 				ExPolygon current = *it;
-				std::cout<< "Printing Part number when writing SVG. ExPolygon bundle nr: "<< count1<< " ExPolygon nr:" << count2 <<" Part number: " << current.part_number << std::endl;
+				std::cout<< "Printing Part number when writing SVG. -ExPolygon bundle nr: "<< count1<< " -ExPolygon nr:" << count2 <<" -Part number: " << current.part_number << std::endl;
 
 				fprintf(f,"\t\t<path d=\"%s\" style=\"fill: %s; stroke: %s; stroke-width: %s; fill-type: evenodd\" slic3r:area=\"%0.4f\" />\n",
 						pd.c_str(), colours[current.part_number].c_str(), "black", "0", unscale(unscale(it->area()))

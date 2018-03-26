@@ -497,9 +497,9 @@ TMFParserContext::startElement(const char *name, const char **atts)
 
 			// Add part number.
 			const char* part_number = get_attribute(atts, "partnumber");
-			m_object->part_number = (!part_number) ? 0 : atoi(part_number);
+			m_object->part_number = (!part_number) ? -1 : atoi(part_number);
 			if (!part_number){
-				std::cout<< "Just set part_number of imported 3mf to 0 because none was found in the file " << std::endl;
+				std::cout<< "Just set part_number of imported 3mf to -1 because none was found in the file " << std::endl;
 			} else {
 				std::cout<< "Partnumber of imported 3mf was found and is set to " << part_number << std::endl;
 			}

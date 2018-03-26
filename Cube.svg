@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="39.997997" height="40.000000" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:slic3r="http://slic3r.org/namespaces/slic3r" viewport-fill="black">
+<!-- Generated using Slic3r 1.3.0-dev http://slic3r.org/ -->
+	<g id="layer0" slic3r:z="0.3500" slic3r:slice-z="0.1750" slic3r:layer-height="0.3500">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer1" slic3r:z="0.6500" slic3r:slice-z="0.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer2" slic3r:z="0.9500" slic3r:slice-z="0.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer3" slic3r:z="1.2500" slic3r:slice-z="1.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer4" slic3r:z="1.5500" slic3r:slice-z="1.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer5" slic3r:z="1.8500" slic3r:slice-z="1.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer6" slic3r:z="2.1500" slic3r:slice-z="2.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer7" slic3r:z="2.4500" slic3r:slice-z="2.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer8" slic3r:z="2.7500" slic3r:slice-z="2.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer9" slic3r:z="3.0500" slic3r:slice-z="2.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer10" slic3r:z="3.3500" slic3r:slice-z="3.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer11" slic3r:z="3.6500" slic3r:slice-z="3.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer12" slic3r:z="3.9500" slic3r:slice-z="3.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer13" slic3r:z="4.2500" slic3r:slice-z="4.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer14" slic3r:z="4.5500" slic3r:slice-z="4.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer15" slic3r:z="4.8500" slic3r:slice-z="4.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer16" slic3r:z="5.1500" slic3r:slice-z="5.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer17" slic3r:z="5.4500" slic3r:slice-z="5.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer18" slic3r:z="5.7500" slic3r:slice-z="5.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer19" slic3r:z="6.0500" slic3r:slice-z="5.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer20" slic3r:z="6.3500" slic3r:slice-z="6.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer21" slic3r:z="6.6500" slic3r:slice-z="6.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer22" slic3r:z="6.9500" slic3r:slice-z="6.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer23" slic3r:z="7.2500" slic3r:slice-z="7.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer24" slic3r:z="7.5500" slic3r:slice-z="7.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer25" slic3r:z="7.8500" slic3r:slice-z="7.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer26" slic3r:z="8.1500" slic3r:slice-z="8.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer27" slic3r:z="8.4500" slic3r:slice-z="8.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer28" slic3r:z="8.7500" slic3r:slice-z="8.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer29" slic3r:z="9.0500" slic3r:slice-z="8.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer30" slic3r:z="9.3500" slic3r:slice-z="9.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer31" slic3r:z="9.6500" slic3r:slice-z="9.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer32" slic3r:z="9.9500" slic3r:slice-z="9.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer33" slic3r:z="10.2500" slic3r:slice-z="10.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer34" slic3r:z="10.5500" slic3r:slice-z="10.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer35" slic3r:z="10.8500" slic3r:slice-z="10.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer36" slic3r:z="11.1500" slic3r:slice-z="11.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer37" slic3r:z="11.4500" slic3r:slice-z="11.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer38" slic3r:z="11.7500" slic3r:slice-z="11.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer39" slic3r:z="12.0500" slic3r:slice-z="11.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer40" slic3r:z="12.3500" slic3r:slice-z="12.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer41" slic3r:z="12.6500" slic3r:slice-z="12.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer42" slic3r:z="12.9500" slic3r:slice-z="12.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer43" slic3r:z="13.2500" slic3r:slice-z="13.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer44" slic3r:z="13.5500" slic3r:slice-z="13.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer45" slic3r:z="13.8500" slic3r:slice-z="13.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer46" slic3r:z="14.1500" slic3r:slice-z="14.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer47" slic3r:z="14.4500" slic3r:slice-z="14.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer48" slic3r:z="14.7500" slic3r:slice-z="14.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer49" slic3r:z="15.0500" slic3r:slice-z="14.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer50" slic3r:z="15.3500" slic3r:slice-z="15.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer51" slic3r:z="15.6500" slic3r:slice-z="15.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer52" slic3r:z="15.9500" slic3r:slice-z="15.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer53" slic3r:z="16.2500" slic3r:slice-z="16.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer54" slic3r:z="16.5500" slic3r:slice-z="16.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer55" slic3r:z="16.8500" slic3r:slice-z="16.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer56" slic3r:z="17.1500" slic3r:slice-z="17.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer57" slic3r:z="17.4500" slic3r:slice-z="17.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer58" slic3r:z="17.7500" slic3r:slice-z="17.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer59" slic3r:z="18.0500" slic3r:slice-z="17.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer60" slic3r:z="18.3500" slic3r:slice-z="18.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer61" slic3r:z="18.6500" slic3r:slice-z="18.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer62" slic3r:z="18.9500" slic3r:slice-z="18.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer63" slic3r:z="19.2500" slic3r:slice-z="19.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer64" slic3r:z="19.5500" slic3r:slice-z="19.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer65" slic3r:z="19.8500" slic3r:slice-z="19.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer66" slic3r:z="20.1500" slic3r:slice-z="20.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer67" slic3r:z="20.4500" slic3r:slice-z="20.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer68" slic3r:z="20.7500" slic3r:slice-z="20.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer69" slic3r:z="21.0500" slic3r:slice-z="20.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer70" slic3r:z="21.3500" slic3r:slice-z="21.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer71" slic3r:z="21.6500" slic3r:slice-z="21.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer72" slic3r:z="21.9500" slic3r:slice-z="21.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer73" slic3r:z="22.2500" slic3r:slice-z="22.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer74" slic3r:z="22.5500" slic3r:slice-z="22.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer75" slic3r:z="22.8500" slic3r:slice-z="22.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer76" slic3r:z="23.1500" slic3r:slice-z="23.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer77" slic3r:z="23.4500" slic3r:slice-z="23.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer78" slic3r:z="23.7500" slic3r:slice-z="23.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer79" slic3r:z="24.0500" slic3r:slice-z="23.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer80" slic3r:z="24.3500" slic3r:slice-z="24.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer81" slic3r:z="24.6500" slic3r:slice-z="24.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer82" slic3r:z="24.9500" slic3r:slice-z="24.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer83" slic3r:z="25.2500" slic3r:slice-z="25.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer84" slic3r:z="25.5500" slic3r:slice-z="25.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer85" slic3r:z="25.8500" slic3r:slice-z="25.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer86" slic3r:z="26.1500" slic3r:slice-z="26.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer87" slic3r:z="26.4500" slic3r:slice-z="26.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer88" slic3r:z="26.7500" slic3r:slice-z="26.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer89" slic3r:z="27.0500" slic3r:slice-z="26.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer90" slic3r:z="27.3500" slic3r:slice-z="27.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer91" slic3r:z="27.6500" slic3r:slice-z="27.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer92" slic3r:z="27.9500" slic3r:slice-z="27.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer93" slic3r:z="28.2500" slic3r:slice-z="28.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer94" slic3r:z="28.5500" slic3r:slice-z="28.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer95" slic3r:z="28.8500" slic3r:slice-z="28.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer96" slic3r:z="29.1500" slic3r:slice-z="29.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer97" slic3r:z="29.4500" slic3r:slice-z="29.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer98" slic3r:z="29.7500" slic3r:slice-z="29.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer99" slic3r:z="30.0500" slic3r:slice-z="29.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer100" slic3r:z="30.3500" slic3r:slice-z="30.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer101" slic3r:z="30.6500" slic3r:slice-z="30.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer102" slic3r:z="30.9500" slic3r:slice-z="30.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer103" slic3r:z="31.2500" slic3r:slice-z="31.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer104" slic3r:z="31.5500" slic3r:slice-z="31.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer105" slic3r:z="31.8500" slic3r:slice-z="31.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer106" slic3r:z="32.1500" slic3r:slice-z="32.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer107" slic3r:z="32.4500" slic3r:slice-z="32.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer108" slic3r:z="32.7500" slic3r:slice-z="32.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer109" slic3r:z="33.0500" slic3r:slice-z="32.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer110" slic3r:z="33.3500" slic3r:slice-z="33.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer111" slic3r:z="33.6500" slic3r:slice-z="33.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer112" slic3r:z="33.9500" slic3r:slice-z="33.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer113" slic3r:z="34.2500" slic3r:slice-z="34.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer114" slic3r:z="34.5500" slic3r:slice-z="34.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer115" slic3r:z="34.8500" slic3r:slice-z="34.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer116" slic3r:z="35.1500" slic3r:slice-z="35.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer117" slic3r:z="35.4500" slic3r:slice-z="35.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer118" slic3r:z="35.7500" slic3r:slice-z="35.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer119" slic3r:z="36.0500" slic3r:slice-z="35.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer120" slic3r:z="36.3500" slic3r:slice-z="36.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer121" slic3r:z="36.6500" slic3r:slice-z="36.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer122" slic3r:z="36.9500" slic3r:slice-z="36.8000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer123" slic3r:z="37.2500" slic3r:slice-z="37.1000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer124" slic3r:z="37.5500" slic3r:slice-z="37.4000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer125" slic3r:z="37.8500" slic3r:slice-z="37.7000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer126" slic3r:z="38.1500" slic3r:slice-z="38.0000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer127" slic3r:z="38.4500" slic3r:slice-z="38.3000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer128" slic3r:z="38.7500" slic3r:slice-z="38.6000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer129" slic3r:z="39.0499" slic3r:slice-z="38.9000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer130" slic3r:z="39.3499" slic3r:slice-z="39.2000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer131" slic3r:z="39.6499" slic3r:slice-z="39.5000" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer132" slic3r:z="39.9499" slic3r:slice-z="39.7999" slic3r:layer-height="0.3000">
+		<path d="M 39.998 -7.90039e-007 1.26636e-006 -7.90039e-007 1.26636e-006 40 39.998 40 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+</svg>
