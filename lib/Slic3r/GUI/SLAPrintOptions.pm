@@ -16,6 +16,9 @@ sub new {
     $self->config->set('infill_extrusion_width', 0.5)  if $self->config->infill_extrusion_width == 0;
     $self->config->set('support_material_extrusion_width', 1)  if $self->config->support_material_extrusion_width == 0;
     $self->config->set('perimeter_extrusion_width', 1) if $self->config->perimeter_extrusion_width == 0;
+#   $self->config->set('bed_shape', (wxTheApp->{mainframe}->{plater}->config->bed_shape));
+#   $self->config->set('bed_shape', (Slic3r::Config->new_from_defaults(qw(bed_shape))));
+   
     
     my $sizer = Wx::BoxSizer->new(wxVERTICAL);
     my $new_optgroup = sub {

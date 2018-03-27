@@ -8,6 +8,8 @@
 #include <complex>
 #include <cstdio>
 #include <string>
+#include "PrintConfig.hpp"
+#include "Config.hpp"
 
 namespace Slic3r {
 
@@ -102,8 +104,8 @@ SLAPrint::slice()
 
 				if (((*v)->part_number) > 19) {
 					std::cout<< "The ModelVolume's part number is higher than the maximum 19: "<< (*v)->part_number << std::endl;
-					(*v)->part_number = 19;
-					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << "in ModelObject" << ModelObjectCounter << "was set to 19"<< std::endl;
+					(*v)->part_number = 0;
+					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << "in ModelObject" << ModelObjectCounter << "was set to 0"<< std::endl;
 				}
 
 				// perform slicing and generate layers
@@ -293,6 +295,24 @@ void
 SLAPrint::write_svg(const std::string &outputfile) const
 {
 	const Sizef3 size = this->bb.size();
+
+	 if (!(this->config.has("bed_shape")))
+	            	std::cout << "SLAPint config has not bed_shape" << std::endl;
+	 if (!(this->config.has("Bed Shape")))
+		            	std::cout << "SLAPint config has not Bed Shape" << std::endl;
+
+
+/*
+	ConfigOption bed_points = this->config.option("bed_shape");
+	std::cout << "Just retrieved ConfigOption in SLAPrint" << std::endl;
+
+	bed_points.serialize()
+
+
+	const Sizef3 size = bed_points;
+
+    // config.option("extruder")->getInt() */
+
 	const double support_material_radius = sm_pillars_radius();
 
 	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "grey", "navy", "darkred", "wheat", "hotpink", "beige", "crimson", "limegreen", "dimgray", "lightsteelblue", "deepskyblue", "linen", "aliceblue", "gold"};

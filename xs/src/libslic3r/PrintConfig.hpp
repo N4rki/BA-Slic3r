@@ -603,7 +603,9 @@ class SLAPrintConfig
     ConfigOptionFloatOrPercent      support_material_extrusion_width;
     ConfigOptionFloat               support_material_spacing;
     ConfigOptionInt                 threads;
+    ConfigOptionPoints              bed_shape;
     
+
     virtual ConfigOption* optptr(const t_config_option_key &opt_key, bool create = false) {
         OPT_PTR(fill_angle);
         OPT_PTR(fill_density);
@@ -618,6 +620,7 @@ class SLAPrintConfig
         OPT_PTR(support_material_extrusion_width);
         OPT_PTR(support_material_spacing);
         OPT_PTR(threads);
+        OPT_PTR(bed_shape);
         
         return NULL;
     };

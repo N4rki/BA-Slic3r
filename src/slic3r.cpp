@@ -128,7 +128,7 @@ main(int argc, char **argv)
         } else if (cli_config.export_svg) {
             std::string outfile = cli_config.output.value;
             if (outfile.empty()) outfile = model.objects.front()->input_file + ".svg";
-            
+
             SLAPrint print(&model);
             print.config.apply(print_config, true);
             print.slice();
