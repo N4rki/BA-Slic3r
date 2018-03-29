@@ -52,52 +52,7 @@ sub new {
     ));
     $self->config->apply(wxTheApp->{mainframe}->{slaconfig});
     
-    my @optgroups = ();
-    {
-        push @optgroups, my $optgroup = Slic3r::GUI::ConfigOptionsGroup->new(
-            parent      => $self,
-            title       => 'USB/Serial connection',
-            config      => $self->config,
-            label_width => 200,
-        );
-        $sizer->Add($optgroup->sizer, 0, wxEXPAND | wxBOTTOM | wxLEFT | wxRIGHT, 10);
-        
-        {
-            my $line = Slic3r::GUI::OptionsGroup::Line->new(
-                label => 'Serial port',
-            );
-            my $serial_port = $optgroup->get_option('serial_port');
-            $serial_port->side_widget(sub {
-                my ($parent) = @_;
-            
-                my $btn = Wx::BitmapButton->new($self, -1, Wx::Bitmap->new($Slic3r::var->("arrow_rotate_clockwise.png"), wxBITMAP_TYPE_PNG),
-                    wxDefaultPosition, wxDefaultSize, &Wx::wxBORDER_NONE);
-                $btn->SetToolTipString("Rescan serial ports")
-                    if $btn->can('SetToolTipString');
-                EVT_BUTTON($self, $btn, sub {
-                    $optgroup->get_field('serial_port')->set_values([ wxTheApp->scan_serial_ports ]);
-                });
-            
-                return $btn;
-            });
-            $line->append_option($serial_port);
-            $line->append_option($optgroup->get_option('serial_speed'));
-            $line->append_button("Test", "wrench.png", sub {
-                my $sender = Slic3r::GCode::Sender->new;
-                my $res = $sender->connect(
-                    $self->{config}->serial_port,
-                    $self->{config}->serial_speed,
-                );
-                if ($res && $sender->wait_connected) {
-                    Slic3r::GUI::show_info($self, "Connection to printer works correctly.", "Success!");
-                } else {
-                    Slic3r::GUI::show_error($self, "Connection failed.");
-                }
-            }, \$self->{serial_test_btn});
-            $optgroup->append_line($line);
-        }
-    }
-    
+    my @optgroups = ();     
     {
         push @optgroups, my $optgroup = Slic3r::GUI::ConfigOptionsGroup->new(
             parent      => $self,
