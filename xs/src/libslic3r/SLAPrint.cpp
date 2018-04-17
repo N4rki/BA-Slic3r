@@ -88,7 +88,7 @@ SLAPrint::slice()
 				}
 				std::cout<< std::endl;
 
-				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0){
+				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0 && (*v)->config.option("extruder")->getInt() < 20){
 
 					int extruderNumber = (*v)->config.option("extruder")->getInt();
 					std::cout<< "Extruder number is greater than 0: "<< extruderNumber << std::endl;
