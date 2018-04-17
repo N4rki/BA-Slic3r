@@ -91,9 +91,9 @@ SLAPrint::slice()
 				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0 && (*v)->config.option("extruder")->getInt() < 20){
 
 					int extruderNumber = (*v)->config.option("extruder")->getInt();
-					std::cout<< "Extruder number is greater than 0: "<< extruderNumber << std::endl;
+					std::cout<< "Extruder number is within 1 to 19: "<< extruderNumber << std::endl;
 					(*v)->part_number = extruderNumber;
-					std::cout<< "Therfore parsed Extruder id to volume part number: "<< extruderNumber << std::endl;
+					std::cout<< "Therfore parsed Extruder id to volume part number<< std::endl;
 				}
 
 
