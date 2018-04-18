@@ -465,7 +465,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		node_type_new = NODE_TYPE_MODEL;
 		break;
 	case 1:
-		std::cout<< "TMFParserContext case 1 got hit." << std::endl;
+// std::cout<< "TMFParserContext case 1 got hit." << std::endl;
 		if (strcmp(name, "metadata") == 0) {
 			const char* metadata_name = this->get_attribute(atts, "name");
 			// Name is required if it's not found stop parsing.
@@ -480,7 +480,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		}
 		break;
 	case 2:
-		std::cout<< "TMFParserContext case 2 got hit." << std::endl;
+// std::cout<< "TMFParserContext case 2 got hit." << std::endl;
 		if (strcmp(name, "object") == 0){
 			const char* object_id = get_attribute(atts, "id");
 			if (!object_id)
@@ -538,7 +538,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		}
 		break;
 	case 3:
-		std::cout<< "TMFParserContext case 3 got hit." << std::endl;
+// std::cout<< "TMFParserContext case 3 got hit." << std::endl;
 		if (strcmp(name, "mesh") == 0){
 			// Create a new model volume.
 			if(m_volume)
@@ -565,7 +565,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		}
 		break;
 	case 4:
-		std::cout<< "TMFParserContext case 4 got hit." << std::endl;
+// std::cout<< "TMFParserContext case 4 got hit." << std::endl;
 		if (strcmp(name, "vertices") == 0) {
 			node_type_new = NODE_TYPE_VERTICES;
 		} else if (strcmp(name, "triangles") == 0) {
@@ -599,6 +599,9 @@ TMFParserContext::startElement(const char *name, const char **atts)
 
 				// Delete the copy of the object.
 				m_model.delete_object(m_model.objects.size() - 1);
+				 //size_t
+				// Delete the Object the component was copied from to avoid the duplicate volume bug.
+				// m_model.delete_object[m_objects_indices[object_id]];
 
 			} else {
 				component_mesh = component_object->raw_mesh();
@@ -612,7 +615,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		}
 		break;
 	case 5:
-		std::cout<< "TMFParserContext case 5 got hit." << std::endl;
+//	std::cout<< "TMFParserContext case 5 got hit." << std::endl;
 		if (strcmp(name, "vertex") == 0) {
 			const char* x = get_attribute(atts, "x");
 			const char* y = get_attribute(atts, "y");
@@ -651,7 +654,7 @@ TMFParserContext::startElement(const char *name, const char **atts)
 		}
 		break;
 	case 6:
-		std::cout<< "TMFParserContext case 6 got hit." << std::endl;
+//	std::cout<< "TMFParserContext case 6 got hit." << std::endl;
 		if( strcmp(name, "slic3r:metadata") == 0){
 			// Create a config option.
 			DynamicPrintConfig *config = nullptr;

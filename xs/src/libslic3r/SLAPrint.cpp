@@ -68,7 +68,7 @@ SLAPrint::slice()
 				std::cout<< "totalModelVolumeCounter: "<< totalModelVolumeCounter << std::endl;
 				totalModelVolumeCounter++;
 				ModelVolumeCounter++;
-
+				std::cout<< "partnumber of volume named (" << (*v)->name << ") is "<< (*v)->part_number  << std::endl;
 				// Create Mesh for each ModelVolume of each ModelInstance and apply the respective instance transformations
 				TriangleMesh InstanceMesh = (*v)->mesh;
 				(*i)->transform_mesh(&InstanceMesh);
@@ -93,7 +93,7 @@ SLAPrint::slice()
 					int extruderNumber = (*v)->config.option("extruder")->getInt();
 					std::cout<< "Extruder number is within 1 to 19: "<< extruderNumber << std::endl;
 					(*v)->part_number = extruderNumber;
-					std::cout<< "Therfore parsed Extruder id to volume part number<< std::endl;
+					std::cout<< "Therfore parsed Extruder id to volume part number"<< std::endl;
 				}
 
 
@@ -102,10 +102,15 @@ SLAPrint::slice()
 					(*v)->part_number = 0;
 				}
 
+				if (((*v)->part_number) < 0){
+				      std::cout<< "The ModelVolume's part number was negative (" << (*v)->part_number << ") and is set so 0. " << std::endl;
+					  (*v)->part_number = 0;
+								}
+
 				if (((*v)->part_number) > 19) {
 					std::cout<< "The ModelVolume's part number is higher than the maximum 19: "<< (*v)->part_number << std::endl;
 					(*v)->part_number = 0;
-					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << "in ModelObject" << ModelObjectCounter << "was set to 0"<< std::endl;
+					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << " in ModelObject " << ModelObjectCounter << " was set to 0"<< std::endl;
 				}
 
 				// perform slicing and generate layers
@@ -297,9 +302,9 @@ SLAPrint::write_svg(const std::string &outputfile) const
 	const Sizef3 size = this->bb.size();
 
 	 if (!(this->config.has("bed_shape")))
-	            	std::cout << "SLAPint config has not bed_shape" << std::endl;
+	            	std::cout << "SLAPint config doesn't have bed_shape" << std::endl;
 	 if (!(this->config.has("Bed Shape")))
-		            	std::cout << "SLAPint config has not Bed Shape" << std::endl;
+		            	std::cout << "SLAPint doesn't have Bed Shape" << std::endl;
 
 
 /*
