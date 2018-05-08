@@ -20,8 +20,12 @@ sub new {
 #   $self->config->set('bed_shape', (Slic3r::Config->new_from_defaults(qw(bed_shape))));
 #    my $bed_polygon = Slic3r::Polygon->new_scale(@{$self->config->bed_shape});
 #    my $bb = $bed_polygon->bounding_box;
+#    print $bed_polygon->first_point;
 #    my $size = $bb->size;
-#    my $center = $bb->center;
+#   $self->config->set('bed_shape', ($size->x, $size->y));
+#    $self->config->set('threads', 3);
+#   $self->config->set('bed_shape', (Slic3r::Config->new_from_defaults(qw(bed_shape))));
+#   my $center = $bb->center;
    
     
     my $sizer = Wx::BoxSizer->new(wxVERTICAL);
@@ -116,6 +120,7 @@ sub _accept {
     }
     
     wxTheApp->{mainframe}->{slaconfig}->apply_static($self->config);
+    
     $self->EndModal(wxID_OK);
     $self->Close;  # needed on Linux
     

@@ -19,17 +19,24 @@ SLAPrint::slice()
 
 	TriangleMesh mesh = this->model->mesh();
 	mesh.repair();
-
+	ConfigOptionPoints bed_points = config.bed_shape;
 	// align to origin taking raft into account
 	this->bb = mesh.bounding_box();
 
+
+			this->bb.min.x = bed_points.values[0].x;
+			this->bb.min.y = bed_points.values[0].y;
+			this->bb.max.x = bed_points.values[2].x;
+			this->bb.max.y = bed_points.values[2].y;
+
+	/*
 	if (this->config.raft_layers > 0) {
 		std::cout<< "bb box is offset because raft layers were found"<< std::endl;
 		this->bb.min.x -= this->config.raft_offset.value;
 		this->bb.min.y -= this->config.raft_offset.value;
 		this->bb.max.x += this->config.raft_offset.value;
 		this->bb.max.y += this->config.raft_offset.value;
-	}
+	} */
 	mesh.translate(0, 0, -bb.min.z);
 	this->bb.translate(0, 0, -bb.min.z);
 
@@ -299,13 +306,47 @@ SLAPrint::_infill_layer(size_t i, const Fill* _fill)
 void
 SLAPrint::write_svg(const std::string &outputfile) const
 {
+
 	const Sizef3 size = this->bb.size();
 
-	 if (!(this->config.has("bed_shape")))
-	            	std::cout << "SLAPint config doesn't have bed_shape" << std::endl;
-	 if (!(this->config.has("Bed Shape")))
-		            	std::cout << "SLAPint doesn't have Bed Shape" << std::endl;
+	if ((this->config.has("Bed Shape")))
+		std::cout << "SLAPint has Bed Shape" << std::endl;
 
+	ConfigOptionPoints bed_points = config.bed_shape;
+
+	 if ((this->config.has("bed_shape"))){
+	            		std::cout << "SLAPint config has bed_shape" << std::endl;
+		            	try
+		            	{
+		            		//ConfigOptionPoints bed_points = config.bed_shape;
+		            		std::cout << "sucessful fetch of config.bed_shape as config option points" << std::endl;
+		            		for (auto &point : bed_points.values){
+		            			std::cout << "value of bed_shape:" << point << std::endl;
+		            		}
+		            	//this->bb.BoundingBoxf3 = &bed_points.values;
+		            		std::cout << "value of bed_shape:" << bed_points.values[0] << std::endl;
+		            	//bed_points.ConfigOptionVectorBase;
+
+		            	//this->bb.min.Pointf = bed_points.values[0];
+		            	//this->bb.max.Pointf = bed_points.values[3];
+
+		            	//size.Pointf3(bed_points.values[3].x, bed_points.values[3].y, 0);
+		            	std::cout << "sucessfully set bb to bed_points"<< std::endl;
+
+		            	}
+		            	catch (...)
+		            	{
+
+		            	    std::cout << "Tried parsing bed_shape to bb but no success" << std::endl;
+		            	}
+	 }
+
+	 if ((this->config.has("threads"))){
+	 		            std::cout << "SLAPint has threads"<< std::endl;
+	 		            std::cout << "SLAPint has threads:"<< config.option("threads")->getInt() << std::endl;
+	 }
+
+	// size = this->bb.size();
 
 /*
 	ConfigOption bed_points = this->config.option("bed_shape");
