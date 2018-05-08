@@ -18,6 +18,10 @@ sub new {
     $self->config->set('perimeter_extrusion_width', 1) if $self->config->perimeter_extrusion_width == 0;
 #   $self->config->set('bed_shape', (wxTheApp->{mainframe}->{plater}->config->bed_shape));
 #   $self->config->set('bed_shape', (Slic3r::Config->new_from_defaults(qw(bed_shape))));
+#    my $bed_polygon = Slic3r::Polygon->new_scale(@{$self->config->bed_shape});
+#    my $bb = $bed_polygon->bounding_box;
+#    my $size = $bb->size;
+#    my $center = $bb->center;
    
     
     my $sizer = Wx::BoxSizer->new(wxVERTICAL);
