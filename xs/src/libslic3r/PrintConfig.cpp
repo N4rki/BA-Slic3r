@@ -303,6 +303,22 @@ PrintConfigDef::PrintConfigDef()
     def->enum_labels.push_back("2");
     def->enum_labels.push_back("3");
     def->enum_labels.push_back("4");
+    def->enum_labels.push_back("5");
+    def->enum_labels.push_back("6");
+    def->enum_labels.push_back("7");
+    def->enum_labels.push_back("8");
+    def->enum_labels.push_back("9");
+    def->enum_labels.push_back("10");
+    def->enum_labels.push_back("11");
+    def->enum_labels.push_back("12");
+    def->enum_labels.push_back("13");
+    def->enum_labels.push_back("14");
+    def->enum_labels.push_back("15");
+    def->enum_labels.push_back("16");
+    def->enum_labels.push_back("17");
+    def->enum_labels.push_back("18");
+    def->enum_labels.push_back("19");
+
 
     def = this->add("extruder_clearance_height", coFloat);
     def->label = "Height";

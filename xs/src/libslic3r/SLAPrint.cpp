@@ -361,7 +361,7 @@ SLAPrint::write_svg(const std::string &outputfile) const
 
 	const double support_material_radius = sm_pillars_radius();
 
-	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "grey", "navy", "darkred", "wheat", "hotpink", "beige", "crimson", "limegreen", "dimgray", "lightsteelblue", "deepskyblue", "linen", "aliceblue", "gold"};
+	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "navy", "ivory", "wheat", "pink", "beige", "crimson", "snow", "dimgray", "khaki", "plum", "linen", "thistle", "gold", "violet"};
 
 	FILE* f = fopen(outputfile.c_str(), "w");
 	fprintf(f,
@@ -388,6 +388,12 @@ SLAPrint::write_svg(const std::string &outputfile) const
 			for (ExPolygons::const_iterator it = slices.begin(); it != slices.end(); ++it) {
 				std::string pd = this->_SVG_path_d(*it);
 				ExPolygon current = *it;
+				if (current.part_number > 19 || current.part_number < 0) {
+									std::cout<< "The ExPolygon's part number was not between 0-19: "<< current.part_number << std::endl;
+									current.part_number = 0;
+									std::cout<< "Therfore, it was set to 0"<< std::endl;
+								}
+
 				std::cout<< "Printing Part number when writing SVG. -ExPolygon bundle nr: "<< count1<< " -ExPolygon nr:" << count2 <<" -Part number: " << current.part_number << std::endl;
 
 				fprintf(f,"\t\t<path d=\"%s\" style=\"fill: %s; stroke: %s; stroke-width: %s; fill-type: evenodd\" slic3r:area=\"%0.4f\" />\n",

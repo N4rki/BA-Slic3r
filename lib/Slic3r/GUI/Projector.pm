@@ -12,7 +12,7 @@ use utf8;
 __PACKAGE__->mk_accessors(qw(config config2 manual_control_config screen controller _optgroups));
 
  # For parsing Svg Path to Library
-    my $output_path1;
+    my $output_path1 = "";
 
 sub new {
     my ($class, $parent) = @_;
@@ -120,7 +120,7 @@ sub new {
             });
             $buttons->Add($btn, 0);
         }
-        $sizer->Add($buttons, 0, wxEXPAND | wxBOTTOM | wxLEFT | wxRIGHT, 10);
+        $sizer->Add($buttons, 0, wxEXPAND | wxTOP | wxBOTTOM | wxLEFT | wxRIGHT, 10);
     }
     EVT_CLOSE($self, sub {
         $self->_close;
@@ -211,11 +211,11 @@ sub _export_svg {
     $self->controller->_print->write_svg($output_file);
 }
 
-
+## Calls the processing library via cmd.
  sub _open_lib_exe {
    my ($self) = @_;
     
-   my $cmd = 'C:\Users\jcj-vb\Bachelorarbeit\Csharp\Gui\bin\Release\Gui.exe ' ;
+   my $cmd = 'C:\Users\jcj-vb\Bachelorarbeit\Csharp\Gui\bin\Release\Gui.exe ' ;   
    $cmd .= $output_path1;
    system($cmd);   
  }
