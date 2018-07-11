@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="29.066776" height="13.975965" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:slic3r="http://slic3r.org/namespaces/slic3r" viewport-fill="black">
+<!-- Generated using Slic3r 1.3.0-dev http://slic3r.org/ -->
+	<g id="layer0" slic3r:z="0.3500" slic3r:slice-z="0.1750" slic3r:layer-height="0.3500">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer1" slic3r:z="0.6500" slic3r:slice-z="0.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer2" slic3r:z="0.9500" slic3r:slice-z="0.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer3" slic3r:z="1.2500" slic3r:slice-z="1.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer4" slic3r:z="1.5500" slic3r:slice-z="1.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer5" slic3r:z="1.8500" slic3r:slice-z="1.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer6" slic3r:z="2.1500" slic3r:slice-z="2.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer7" slic3r:z="2.4500" slic3r:slice-z="2.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer8" slic3r:z="2.7500" slic3r:slice-z="2.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer9" slic3r:z="3.0500" slic3r:slice-z="2.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 28.0668 1.04597 13.9668 1.04597 13.9668 12.976 28.0668 12.976 z M 18.3568 8.72598 18.3568 5.22596 21.8547 5.22596 21.8547 8.72598 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer10" slic3r:z="3.3500" slic3r:slice-z="3.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 28.0668 1.04597 13.9668 1.04597 13.9668 12.976 28.0668 12.976 z M 18.3568 8.72598 18.3568 5.22596 21.8547 5.22596 21.8547 8.72598 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer11" slic3r:z="3.6500" slic3r:slice-z="3.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 29.0668 0.0459667 12.9668 0.0459667 12.9668 13.976 29.0668 13.976 z M 13.9668 12.976 13.9668 1.04597 28.0668 1.04597 28.0668 12.976 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 28.0668 1.04597 13.9668 1.04597 13.9668 12.976 28.0668 12.976 z M 18.3568 8.72598 18.3568 5.22596 21.8547 5.22596 21.8547 8.72598 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer12" slic3r:z="3.9500" slic3r:slice-z="3.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer13" slic3r:z="4.2500" slic3r:slice-z="4.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer14" slic3r:z="4.5500" slic3r:slice-z="4.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer15" slic3r:z="4.8500" slic3r:slice-z="4.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer16" slic3r:z="5.1500" slic3r:slice-z="5.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer17" slic3r:z="5.4500" slic3r:slice-z="5.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer18" slic3r:z="5.7500" slic3r:slice-z="5.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer19" slic3r:z="6.0500" slic3r:slice-z="5.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer20" slic3r:z="6.3500" slic3r:slice-z="6.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer21" slic3r:z="6.6500" slic3r:slice-z="6.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer22" slic3r:z="6.9500" slic3r:slice-z="6.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer23" slic3r:z="7.2500" slic3r:slice-z="7.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer24" slic3r:z="7.5500" slic3r:slice-z="7.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer25" slic3r:z="7.8500" slic3r:slice-z="7.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer26" slic3r:z="8.1500" slic3r:slice-z="8.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer27" slic3r:z="8.4500" slic3r:slice-z="8.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer28" slic3r:z="8.7500" slic3r:slice-z="8.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer29" slic3r:z="9.0500" slic3r:slice-z="8.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer30" slic3r:z="9.3500" slic3r:slice-z="9.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer31" slic3r:z="9.6500" slic3r:slice-z="9.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer32" slic3r:z="9.9500" slic3r:slice-z="9.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer33" slic3r:z="10.2500" slic3r:slice-z="10.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer34" slic3r:z="10.5500" slic3r:slice-z="10.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer35" slic3r:z="10.8500" slic3r:slice-z="10.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer36" slic3r:z="11.1500" slic3r:slice-z="11.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer37" slic3r:z="11.4500" slic3r:slice-z="11.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer38" slic3r:z="11.7500" slic3r:slice-z="11.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer39" slic3r:z="12.0500" slic3r:slice-z="11.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer40" slic3r:z="12.3500" slic3r:slice-z="12.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer41" slic3r:z="12.6500" slic3r:slice-z="12.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer42" slic3r:z="12.9500" slic3r:slice-z="12.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer43" slic3r:z="13.2500" slic3r:slice-z="13.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer44" slic3r:z="13.5500" slic3r:slice-z="13.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer45" slic3r:z="13.8500" slic3r:slice-z="13.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer46" slic3r:z="14.1500" slic3r:slice-z="14.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer47" slic3r:z="14.4500" slic3r:slice-z="14.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer48" slic3r:z="14.7500" slic3r:slice-z="14.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer49" slic3r:z="15.0500" slic3r:slice-z="14.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer50" slic3r:z="15.3500" slic3r:slice-z="15.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer51" slic3r:z="15.6500" slic3r:slice-z="15.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer52" slic3r:z="15.9500" slic3r:slice-z="15.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer53" slic3r:z="16.2500" slic3r:slice-z="16.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer54" slic3r:z="16.5500" slic3r:slice-z="16.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer55" slic3r:z="16.8500" slic3r:slice-z="16.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer56" slic3r:z="17.1500" slic3r:slice-z="17.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.500000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer57" slic3r:z="17.4500" slic3r:slice-z="17.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 21.8547 5.22597 18.3568 5.22597 18.3568 8.72597 21.8547 8.72597 z M 19.3568 7.72597 19.3568 6.22597 20.8547 6.22597 20.8547 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<circle cx="24.606782" cy="5.975966" r="0.300000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="22.604678" cy="6.473862" r="0.300000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="23.602574" cy="7.975966" r="0.300000" stroke-width="0" fill="white" slic3r:type="support" />
+		<circle cx="24.606782" cy="6.480174" r="0.300000" stroke-width="0" fill="white" slic3r:type="support" />
+	</g>
+	<g id="layer58" slic3r:z="17.7500" slic3r:slice-z="17.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 24.3568 6.22597 21.8547 6.22597 21.8547 7.72597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer59" slic3r:z="18.0500" slic3r:slice-z="17.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 24.3568 6.22597 21.8547 6.22597 21.8547 7.72597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer60" slic3r:z="18.3500" slic3r:slice-z="18.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 24.3568 6.22597 21.8547 6.22597 21.8547 7.72597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="infill" />
+	</g>
+	<g id="layer61" slic3r:z="18.6500" slic3r:slice-z="18.5000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer62" slic3r:z="18.9500" slic3r:slice-z="18.8000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer63" slic3r:z="19.2500" slic3r:slice-z="19.1000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer64" slic3r:z="19.5500" slic3r:slice-z="19.4000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer65" slic3r:z="19.8500" slic3r:slice-z="19.7000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer66" slic3r:z="20.1500" slic3r:slice-z="20.0000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z M 0.999998 12.93 0.999998 1 11.67 1 11.67 12.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z M 19.3568 7.72597 19.3568 6.22597 24.3568 6.22597 24.3568 7.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:type="perimeter" />
+	</g>
+	<g id="layer67" slic3r:z="20.4500" slic3r:slice-z="20.3000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer68" slic3r:z="20.7500" slic3r:slice-z="20.6000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer69" slic3r:z="21.0500" slic3r:slice-z="20.9000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+		<path d="M 25.3568 5.22597 18.3568 5.22597 18.3568 8.72597 25.3568 8.72597 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+	<g id="layer70" slic3r:z="21.3500" slic3r:slice-z="21.2000" slic3r:layer-height="0.3000">
+		<path d="M 12.67 7.49939e-007 -1.95483e-006 7.49939e-007 -1.95483e-006 13.93 12.67 13.93 z " style="fill: white; stroke: black; stroke-width: 0; fill-type: evenodd" slic3r:area="-0.0021" />
+	</g>
+</svg>

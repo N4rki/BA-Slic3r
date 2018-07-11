@@ -439,7 +439,7 @@ ModelMaterial::apply(const t_model_material_attributes &attributes)
 ModelObject::ModelObject(Model *model)
 : part_number(-1), _bounding_box_valid(false), model(model)
 {
-	std::cout<< "Just set part number of newly created ModelObject to -1" << std::endl;
+	//std::cout<< "Just set part number of newly created ModelObject to -1" << std::endl;
 }
 
 ModelObject::ModelObject(Model *model, const ModelObject &other, bool copy_volumes)
@@ -957,7 +957,7 @@ ModelObject::print_info() const
 
 
 ModelVolume::ModelVolume(ModelObject* object, const TriangleMesh &mesh)
-:   mesh(mesh), modifier(false), object(object)
+
 :   mesh(mesh), input_file(""), modifier(false), object(object)
 {
 	this->part_number = -1;
@@ -965,6 +965,7 @@ ModelVolume::ModelVolume(ModelObject* object, const TriangleMesh &mesh)
 	}
 
 ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
+
 :   name(other.name),
     mesh(other.mesh),
     config(other.config),
@@ -977,6 +978,7 @@ ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
 	modifier(other.modifier), object(object)
 {
 	this->material_id(other.material_id());
+	std::cout<< "Just parsed ModelVolume Partnumber " <<  this->part_number << " to new Model Volume" << std::endl;
 }
 
 ModelVolume& ModelVolume::operator= (ModelVolume other)

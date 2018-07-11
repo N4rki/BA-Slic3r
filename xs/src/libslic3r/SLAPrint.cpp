@@ -19,17 +19,24 @@ SLAPrint::slice()
 
 	TriangleMesh mesh = this->model->mesh();
 	mesh.repair();
-
+	ConfigOptionPoints bed_points = config.bed_shape;
 	// align to origin taking raft into account
 	this->bb = mesh.bounding_box();
 
+    // Set bed as bounding box of polygons
+			this->bb.min.x = bed_points.values[0].x;
+			this->bb.min.y = bed_points.values[0].y;
+			this->bb.max.x = bed_points.values[2].x;
+			this->bb.max.y = bed_points.values[2].y;
+
+	/*
 	if (this->config.raft_layers > 0) {
 		std::cout<< "bb box is offset because raft layers were found"<< std::endl;
 		this->bb.min.x -= this->config.raft_offset.value;
 		this->bb.min.y -= this->config.raft_offset.value;
 		this->bb.max.x += this->config.raft_offset.value;
 		this->bb.max.y += this->config.raft_offset.value;
-	}
+	} */
 	mesh.translate(0, 0, -bb.min.z);
 	this->bb.translate(0, 0, -bb.min.z);
 
@@ -68,7 +75,7 @@ SLAPrint::slice()
 				std::cout<< "totalModelVolumeCounter: "<< totalModelVolumeCounter << std::endl;
 				totalModelVolumeCounter++;
 				ModelVolumeCounter++;
-
+				std::cout<< "partnumber of volume named (" << (*v)->name << ") is "<< (*v)->part_number  << std::endl;
 				// Create Mesh for each ModelVolume of each ModelInstance and apply the respective instance transformations
 				TriangleMesh InstanceMesh = (*v)->mesh;
 				(*i)->transform_mesh(&InstanceMesh);
@@ -88,12 +95,12 @@ SLAPrint::slice()
 				}
 				std::cout<< std::endl;
 
-				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0){
+				if ((*v)->config.has("extruder") && (*v)->config.option("extruder")->getInt() > 0 && (*v)->config.option("extruder")->getInt() < 20){
 
 					int extruderNumber = (*v)->config.option("extruder")->getInt();
-					std::cout<< "Extruder number is greater than 0: "<< extruderNumber << std::endl;
+					std::cout<< "Extruder number is within 1 to 19: "<< extruderNumber << std::endl;
 					(*v)->part_number = extruderNumber;
-					std::cout<< "Therfore parsed Extruder id to volume part number: "<< extruderNumber << std::endl;
+					std::cout<< "Therfore parsed Extruder id to volume part number"<< std::endl;
 				}
 
 
@@ -102,10 +109,15 @@ SLAPrint::slice()
 					(*v)->part_number = 0;
 				}
 
+				if (((*v)->part_number) < 0){
+				      std::cout<< "The ModelVolume's part number was negative (" << (*v)->part_number << ") and is set so 0. " << std::endl;
+					  (*v)->part_number = 0;
+								}
+
 				if (((*v)->part_number) > 19) {
 					std::cout<< "The ModelVolume's part number is higher than the maximum 19: "<< (*v)->part_number << std::endl;
 					(*v)->part_number = 0;
-					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << "in ModelObject" << ModelObjectCounter << "was set to 0"<< std::endl;
+					std::cout<< "Therfore, the part number of ModelVolume " << ModelVolumeCounter << " in ModelObject " << ModelObjectCounter << " was set to 0"<< std::endl;
 				}
 
 				// perform slicing and generate layers
@@ -294,13 +306,47 @@ SLAPrint::_infill_layer(size_t i, const Fill* _fill)
 void
 SLAPrint::write_svg(const std::string &outputfile) const
 {
+
 	const Sizef3 size = this->bb.size();
 
-	 if (!(this->config.has("bed_shape")))
-	            	std::cout << "SLAPint config has not bed_shape" << std::endl;
-	 if (!(this->config.has("Bed Shape")))
-		            	std::cout << "SLAPint config has not Bed Shape" << std::endl;
+	if ((this->config.has("Bed Shape")))
+		std::cout << "SLAPint has Bed Shape" << std::endl;
 
+	ConfigOptionPoints bed_points = config.bed_shape;
+
+	 if ((this->config.has("bed_shape"))){
+	            		std::cout << "SLAPint config has bed_shape" << std::endl;
+		            	try
+		            	{
+		            		//ConfigOptionPoints bed_points = config.bed_shape;
+		            		std::cout << "sucessful fetch of config.bed_shape as config option points" << std::endl;
+		            		for (auto &point : bed_points.values){
+		            			std::cout << "value of bed_shape:" << point << std::endl;
+		            		}
+		            	//this->bb.BoundingBoxf3 = &bed_points.values;
+		            		std::cout << "value of bed_shape:" << bed_points.values[0] << std::endl;
+		            	//bed_points.ConfigOptionVectorBase;
+
+		            	//this->bb.min.Pointf = bed_points.values[0];
+		            	//this->bb.max.Pointf = bed_points.values[3];
+
+		            	//size.Pointf3(bed_points.values[3].x, bed_points.values[3].y, 0);
+		            	std::cout << "sucessfully set bb to bed_points"<< std::endl;
+
+		            	}
+		            	catch (...)
+		            	{
+
+		            	    std::cout << "Tried parsing bed_shape to bb but no success" << std::endl;
+		            	}
+	 }
+
+	 if ((this->config.has("threads"))){
+	 		            std::cout << "SLAPint has threads"<< std::endl;
+	 		            std::cout << "SLAPint has threads:"<< config.option("threads")->getInt() << std::endl;
+	 }
+
+	// size = this->bb.size();
 
 /*
 	ConfigOption bed_points = this->config.option("bed_shape");
@@ -315,7 +361,7 @@ SLAPrint::write_svg(const std::string &outputfile) const
 
 	const double support_material_radius = sm_pillars_radius();
 
-	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "grey", "navy", "darkred", "wheat", "hotpink", "beige", "crimson", "limegreen", "dimgray", "lightsteelblue", "deepskyblue", "linen", "aliceblue", "gold"};
+	std::string colours[20] = { "white", "green", "blue", "red", "yellow", "orange", "navy", "ivory", "wheat", "pink", "beige", "crimson", "snow", "dimgray", "khaki", "plum", "linen", "thistle", "gold", "violet"};
 
 	FILE* f = fopen(outputfile.c_str(), "w");
 	fprintf(f,
@@ -342,6 +388,12 @@ SLAPrint::write_svg(const std::string &outputfile) const
 			for (ExPolygons::const_iterator it = slices.begin(); it != slices.end(); ++it) {
 				std::string pd = this->_SVG_path_d(*it);
 				ExPolygon current = *it;
+				if (current.part_number > 19 || current.part_number < 0) {
+									std::cout<< "The ExPolygon's part number was not between 0-19: "<< current.part_number << std::endl;
+									current.part_number = 0;
+									std::cout<< "Therfore, it was set to 0"<< std::endl;
+								}
+
 				std::cout<< "Printing Part number when writing SVG. -ExPolygon bundle nr: "<< count1<< " -ExPolygon nr:" << count2 <<" -Part number: " << current.part_number << std::endl;
 
 				fprintf(f,"\t\t<path d=\"%s\" style=\"fill: %s; stroke: %s; stroke-width: %s; fill-type: evenodd\" slic3r:area=\"%0.4f\" />\n",

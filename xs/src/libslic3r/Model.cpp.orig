@@ -455,8 +455,7 @@ ModelObject::ModelObject(Model *model, const ModelObject &other, bool copy_volum
 	_bounding_box(other._bounding_box),
 	_bounding_box_valid(other._bounding_box_valid),
 	model(model)
-{
-	//std::cout<< "Just set ModelObject partnumber to 6 due to ModelObject copy " << std::endl;
+{	
 	if (copy_volumes) {
 		this->volumes.reserve(other.volumes.size());
 		for (ModelVolumePtrs::const_iterator i = other.volumes.begin(); i != other.volumes.end(); ++i)
@@ -958,11 +957,18 @@ ModelObject::print_info() const
 
 
 ModelVolume::ModelVolume(ModelObject* object, const TriangleMesh &mesh)
+:   mesh(mesh), modifier(false), object(object)
 <<<<<<< HEAD
 :   mesh(mesh), input_file(""), modifier(false), object(object)
-{}
+=======
+>>>>>>> gui_svgsplit_window
+{
+	this->part_number = -1;
+	// std::cout<< "Just initialized new ModelVolume with partnumber -1." << std::endl;
+	}
 
 ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
+<<<<<<< HEAD
 :   name(other.name),
     mesh(other.mesh),
     config(other.config),
@@ -970,18 +976,12 @@ ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
     input_file_obj_idx(other.input_file_obj_idx),
     input_file_vol_idx(other.input_file_vol_idx),
     modifier(other.modifier),
+	part_number(other.part_number),
     object(object)
 =======
-:   mesh(mesh), modifier(false), object(object)
-{
-	this->part_number = -1;
-	// std::cout<< "Just initialized new ModelVolume with partnumber -1." << std::endl;
-	}
-
-ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
 :   part_number(other.part_number), name(other.name), mesh(other.mesh), config(other.config),
-	modifier(other.modifier), object(object)
 >>>>>>> gui_svgsplit_window
+	modifier(other.modifier), object(object)
 {
 	this->material_id(other.material_id());
 	std::cout<< "Just parsed ModelVolume Partnumber " <<  this->part_number << " to new Model Volume" << std::endl;

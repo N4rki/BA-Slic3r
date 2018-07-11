@@ -8,16 +8,12 @@ use Wx qw(:dialog :id :misc :sizer :systemsettings :bitmap :button :icon :filedi
 use Wx::Event qw(EVT_BUTTON EVT_CLOSE EVT_TEXT_ENTER EVT_SPINCTRL EVT_SLIDER);
 use base qw(Wx::Dialog Class::Accessor);
 use utf8;
-use FindBin; # for relative path of processing library gui
 
 __PACKAGE__->mk_accessors(qw(config config2 manual_control_config screen controller _optgroups));
 
- # For parsing Svg Path to Library
-    my $output_path1 = "";
-
 sub new {
     my ($class, $parent) = @_;
-    my $self = $class->SUPER::new($parent, -1, "Slice to SVG: Export & processing", wxDefaultPosition, wxDefaultSize);
+    my $self = $class->SUPER::new($parent, -1, "Projector for DLP", wxDefaultPosition, wxDefaultSize);
     $self->config2({
         display                 => 0,
         show_bed                => 1,
@@ -37,7 +33,6 @@ sub new {
         temperature             => '',
         bed_temperature         => '',
     });
-      
     
     my $ini = eval { Slic3r::Config->read_ini("$Slic3r::GUI::datadir/DLP.ini") };
     if ($ini) {
@@ -56,9 +51,7 @@ sub new {
         qw(serial_port serial_speed bed_shape start_gcode end_gcode z_offset)
     ));
     $self->config->apply(wxTheApp->{mainframe}->{slaconfig});
-    
-    my @optgroups = ();     
-   
+       
     
     my $on_change = sub {
         my ($opt_id, $value) = @_;
@@ -81,21 +74,10 @@ sub new {
     };
     
     
-       
     
-    $self->_optgroups([@optgroups]);
     
-    {
-        my $sizer1 = Wx::BoxSizer->new(wxHORIZONTAL);
-        $sizer->Add($sizer1, 0, wxEXPAND | wxBOTTOM | wxLEFT | wxRIGHT, 10);
-        
-                       
-        
-        my $sizer2 = Wx::BoxSizer->new(wxHORIZONTAL);
-        $sizer->Add($sizer2, 0, wxEXPAND | wxBOTTOM | wxLEFT | wxRIGHT, 10);
-               
-    }
     
+   
     {
         # should be wxCLOSE but it crashes on Linux, maybe it's a Wx bug
         my $buttons = Wx::BoxSizer->new(wxHORIZONTAL);
@@ -105,12 +87,6 @@ sub new {
                 $self->_export_svg;
             });
             $buttons->Add($btn, 0);
-            
-            my $btn1 = Wx::Button->new($self, -1, "Continue in Processing Library…");
-            EVT_BUTTON($self, $btn1, sub {
-                $self->_open_lib_exe;
-            });
-            $buttons->Add($btn1, 0);
         }
         $buttons->AddStretchSpacer(1);
         {
@@ -121,7 +97,7 @@ sub new {
             });
             $buttons->Add($btn, 0);
         }
-        $sizer->Add($buttons, 0, wxEXPAND | wxTOP | wxBOTTOM | wxLEFT | wxRIGHT, 10);
+        $sizer->Add($buttons, 0, wxEXPAND | wxBOTTOM | wxLEFT | wxRIGHT, 10);
     }
     EVT_CLOSE($self, sub {
         $self->_close;
@@ -131,10 +107,17 @@ sub new {
     $sizer->SetSizeHints($self);
     
     # reuse existing screen if any
-   
-    
-    
-    # wxTheApp->{mainframe}->Hide;
+    if ($Slic3r::GUI::DLP_projection_screen) {
+        $self->screen($Slic3r::GUI::DLP_projection_screen);
+        $self->screen->config($self->config);
+        $self->screen->config2($self->config2);
+    } else {
+        $self->screen(Slic3r::GUI::Projector::Screen->new($parent, $self->config, $self->config2));
+        $Slic3r::GUI::DLP_projection_screen = $self->screen;
+    }
+    $self->screen->reposition;
+    $self->screen->Show;
+    wxTheApp->{mainframe}->Hide;
     
     # initialize controller
     $self->controller(Slic3r::GUI::Projector::Controller->new(
@@ -160,9 +143,13 @@ sub new {
         },
     ));
     {
-        my $max = $self->controller->_print->layer_count-1;        
+        my $max = $self->controller->_print->layer_count-1;
+        $self->{layers_spinctrl}->SetRange(0, $max); 
+        $self->{layers_slider}->SetRange(0, $max);
     }
-       
+    
+    $self->_update_buttons;
+    $self->show_print_time;
     
     return $self;
 }
@@ -197,31 +184,14 @@ sub _export_svg {
         &Slic3r::GUI::FILE_WILDCARDS->{svg},
         wxFD_SAVE | wxFD_OVERWRITE_PROMPT,
     );
-    print "FilePath: ";
-    
     if ($dlg->ShowModal != wxID_OK) {
         $dlg->Destroy;
         return;
     }
-    
     $output_file = Slic3r::decode_path($dlg->GetPath);
-    print $output_file;
-    print "Output Path: $output_file \n";
     
-    $output_path1 = $output_file;
     $self->controller->_print->write_svg($output_file);
 }
-
-## Calls the processing library via cmd.
- sub _open_lib_exe {
-   my ($self) = @_;
-    
-   my $rawDataName = "$FindBin::Bin/processing-lib/Gui.exe"; 
-   my $cmd = $rawDataName;   
-   $cmd .= $output_path1;
-   system($cmd);   
- }
-
 
 sub _set_status {
     my ($self, $status) = @_;
@@ -244,7 +214,24 @@ sub show_print_time {
 sub _close {
     my $self = shift;
     
+    # if projection screen is not on the same display as our dialog,
+    # ask the user whether they want to keep it open
+    my $keep_screen = 0;
+    my $display_area = Wx::Display->new($self->config2->{display})->GetGeometry;
+    if (!$display_area->Contains($self->GetScreenPosition)) {
+        my $res = Wx::MessageDialog->new($self, "Do you want to keep the black screen open?", 'Black screen', wxYES_NO | wxYES_DEFAULT | wxICON_QUESTION)->ShowModal;
+        $keep_screen = ($res == wxID_YES);
+    }
     
+    if ($keep_screen) {
+        $self->screen->config(undef);
+        $self->screen->config2(undef);
+        $self->screen->Refresh;
+    } else {
+        $self->screen->Destroy;
+        $self->screen(undef);
+        $Slic3r::GUI::DLP_projection_screen = undef;
+    }
     wxTheApp->{mainframe}->Show;
     
     $self->EndModal(wxID_OK);
@@ -282,7 +269,7 @@ sub BUILD {
         $print->apply_config(wxTheApp->{mainframe}->{plater}->config);
         $print->apply_config(wxTheApp->{mainframe}->{slaconfig});
         $self->_print($print);
-        
+        $self->screen->print($print);
     
         # make sure layers were sliced
         {
@@ -294,7 +281,15 @@ sub BUILD {
         
         $self->_heights($print->heights);
     }
-        
+    
+    # projection timer
+    my $timer_id = &Wx::NewId();
+    $self->timer(Wx::Timer->new($self->screen, $timer_id));
+    EVT_TIMER($self->screen, $timer_id, sub {
+        my $cb = $self->_timer_cb;
+        $self->_timer_cb(undef);
+        $cb->();
+    });
 }
 
 sub delay {
