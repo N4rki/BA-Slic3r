@@ -393,18 +393,35 @@ Model::convert_multipart_object()
 
 	ModelObject* object = this->add_object();
 	object->input_file = this->objects.front()->input_file;
-
+	int ocount = 0;
+	std::cout<< "Objects size() before conversion: "<< this->objects.size() << std::endl;
 	for (const ModelObject* o : this->objects) {
+		std::cout<< "ocount= "<< ocount << std::endl;
+		// This if clause ignores the last ModelObject, which holds all duplicate volumes that were falsely generated in
+		// the 3mf importer TMF.cpp::TMFParserContext::startElement. Probably in case 4 (component).
+		if (ocount+1 < this->objects.size()){
+		int vcount = 0;
 		for (const ModelVolume* v : o->volumes) {
+			std::cout<< "vcount= "<< vcount << std::endl;
 			ModelVolume* v2 = object->add_volume(*v);
 			v2->name = o->name;
+			std::cout<< "Convert_multipart: Partnumber of volume named " << v2->name << " is " << v2->part_number  << std::endl;
+			v2->part_number = o->part_number;
+			std::cout<< "Convert_multipart: Just parsed 3MF Partnumber from ModelObject to ModelVolume: "<< v2->part_number << std::endl;
+			vcount++;
 		}
 	}
+		ocount++;
+	}
 	for (const ModelInstance* i : this->objects.front()->instances)
-		object->add_instance(*i);
+			object->add_instance(*i);
+
+	std::cout<< "Objects size() after conversion: "<< this->objects.size() << std::endl;
 
 	while (this->objects.size() > 1)
 		this->delete_object(0);
+
+	std::cout<< "Objects size() after deletion: "<< this->objects.size() << std::endl;
 }
 
 ModelMaterial::ModelMaterial(Model *model) : model(model) {}
@@ -438,8 +455,7 @@ ModelObject::ModelObject(Model *model, const ModelObject &other, bool copy_volum
 	_bounding_box(other._bounding_box),
 	_bounding_box_valid(other._bounding_box_valid),
 	model(model)
-{
-	//std::cout<< "Just set ModelObject partnumber to 6 due to ModelObject copy " << std::endl;
+{	
 	if (copy_volumes) {
 		this->volumes.reserve(other.volumes.size());
 		for (ModelVolumePtrs::const_iterator i = other.volumes.begin(); i != other.volumes.end(); ++i)
@@ -942,10 +958,22 @@ ModelObject::print_info() const
 
 ModelVolume::ModelVolume(ModelObject* object, const TriangleMesh &mesh)
 :   mesh(mesh), modifier(false), object(object)
-{}
+:   mesh(mesh), input_file(""), modifier(false), object(object)
+{
+	this->part_number = -1;
+	// std::cout<< "Just initialized new ModelVolume with partnumber -1." << std::endl;
+	}
 
 ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
-:   name(other.name), mesh(other.mesh), config(other.config),
+:   name(other.name),
+    mesh(other.mesh),
+    config(other.config),
+    input_file(other.input_file),
+    input_file_obj_idx(other.input_file_obj_idx),
+    input_file_vol_idx(other.input_file_vol_idx),
+    modifier(other.modifier),
+	part_number(other.part_number),
+    object(object)
 	modifier(other.modifier), object(object)
 {
 	this->material_id(other.material_id());
@@ -964,6 +992,10 @@ ModelVolume::swap(ModelVolume &other)
 	std::swap(this->mesh,       other.mesh);
 	std::swap(this->config,     other.config);
 	std::swap(this->modifier,   other.modifier);
+	
+	std::swap(this->input_file,            other.input_file);
+	std::swap(this->input_file_obj_idx,    other.input_file_obj_idx);
+	std::swap(this->input_file_vol_idx,    other.input_file_vol_idx);
 }
 
 t_model_material_id
