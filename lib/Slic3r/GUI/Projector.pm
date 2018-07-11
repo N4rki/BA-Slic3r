@@ -8,6 +8,7 @@ use Wx qw(:dialog :id :misc :sizer :systemsettings :bitmap :button :icon :filedi
 use Wx::Event qw(EVT_BUTTON EVT_CLOSE EVT_TEXT_ENTER EVT_SPINCTRL EVT_SLIDER);
 use base qw(Wx::Dialog Class::Accessor);
 use utf8;
+use FindBin; # for relative path of processing library gui
 
 __PACKAGE__->mk_accessors(qw(config config2 manual_control_config screen controller _optgroups));
 
@@ -16,7 +17,7 @@ __PACKAGE__->mk_accessors(qw(config config2 manual_control_config screen control
 
 sub new {
     my ($class, $parent) = @_;
-    my $self = $class->SUPER::new($parent, -1, "Projector for DLP", wxDefaultPosition, wxDefaultSize);
+    my $self = $class->SUPER::new($parent, -1, "Slice to SVG: Export & processing", wxDefaultPosition, wxDefaultSize);
     $self->config2({
         display                 => 0,
         show_bed                => 1,
@@ -215,7 +216,8 @@ sub _export_svg {
  sub _open_lib_exe {
    my ($self) = @_;
     
-   my $cmd = 'C:\Users\jcj-vb\Bachelorarbeit\Csharp\Gui\bin\Release\Gui.exe ' ;   
+   my $rawDataName = "$FindBin::Bin/processing-lib/Gui.exe"; 
+   my $cmd = $rawDataName ;   
    $cmd .= $output_path1;
    system($cmd);   
  }

@@ -7,7 +7,7 @@ __PACKAGE__->mk_accessors(qw(config));
 
 sub new {
     my ($class, $parent) = @_;
-    my $self = $class->SUPER::new($parent, -1, "SLA/DLP Print", wxDefaultPosition, wxDefaultSize);
+    my $self = $class->SUPER::new($parent, -1, "Slice to SVG: Parameters", wxDefaultPosition, wxDefaultSize);
     
     $self->config(Slic3r::Config::SLAPrint->new);
     $self->config->apply_dynamic(wxTheApp->{mainframe}->{plater}->config);
@@ -23,7 +23,6 @@ sub new {
 #    print $bed_polygon->first_point;
 #    my $size = $bb->size;
 #   $self->config->set('bed_shape', ($size->x, $size->y));
-#    $self->config->set('threads', 3);
 #   $self->config->set('bed_shape', (Slic3r::Config->new_from_defaults(qw(bed_shape))));
 #   my $center = $bb->center;
    
@@ -43,8 +42,7 @@ sub new {
     };
     {
         my $optgroup = $new_optgroup->('Layers');
-        $optgroup->append_single_option_line('layer_height');
-        $optgroup->append_single_option_line('first_layer_height');
+        $optgroup->append_single_option_line('layer_height');   
     }
     {
         my $optgroup = $new_optgroup->('Infill');

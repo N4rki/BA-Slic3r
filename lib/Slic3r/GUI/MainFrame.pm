@@ -292,12 +292,12 @@ sub _init_menubar {
         wxTheApp->append_menu_item($windowMenu, "&Controller\tCtrl+Y", 'Show the printer controller', sub {
             $self->select_tab(1);
         }, undef, 'printer_empty.png');
-        wxTheApp->append_menu_item($windowMenu, "DLP Projector…\tCtrl+P", 'Open projector window for DLP printing', sub {
+        wxTheApp->append_menu_item($windowMenu, "Slice to SVG …\tCtrl+S", 'Open window for Slicing to vectorformat', sub {
             $self->{plater}->pause_background_process;
             $self->{slaconfig} = Slic3r::Config->new;
             Slic3r::GUI::SLAPrintOptions->new($self)->ShowModal;
             $self->{plater}->resume_background_process;
-        }, undef, 'film.png');
+        }, undef, 'layers1.png');
     }
     
     # Help menu

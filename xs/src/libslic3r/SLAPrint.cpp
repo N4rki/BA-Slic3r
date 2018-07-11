@@ -23,7 +23,7 @@ SLAPrint::slice()
 	// align to origin taking raft into account
 	this->bb = mesh.bounding_box();
 
-
+    // Set bed as bounding box of polygons
 			this->bb.min.x = bed_points.values[0].x;
 			this->bb.min.y = bed_points.values[0].y;
 			this->bb.max.x = bed_points.values[2].x;
