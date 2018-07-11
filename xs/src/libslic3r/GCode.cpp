@@ -426,7 +426,10 @@ GCode::extrude(ExtrusionLoop loop, std::string description, double speed)
         && loop.length() <= SMALL_PERIMETER_LENGTH
         && speed == -1)
         speed = this->config.get_abs_value("small_perimeter_speed");
-    
+        description = "small perimeter";
+    if (paths.front().role == erExternalPerimeter)
+        description = std::string("external ") + description;
+
     // extrude along the path
     std::string gcode;
     for (ExtrusionPaths::const_iterator path = paths.begin(); path != paths.end(); ++path)
@@ -503,8 +506,8 @@ std::string
 GCode::_extrude(ExtrusionPath path, std::string description, double speed)
 {
     path.simplify(SCALED_RESOLUTION);
-    
     std::string gcode;
+    description = path.is_bridge() ? description + " (bridge)" : description;
     
     // go to first point of extrusion path
     if (!this->_last_pos_defined || !this->_last_pos.coincides_with(path.first_point())) {

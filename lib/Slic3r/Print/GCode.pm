@@ -153,6 +153,10 @@ sub export {
     foreach my $start_gcode (@{ $self->config->start_filament_gcode }) { # process filament gcode in order
         $include_start_extruder_temp = $include_start_extruder_temp &&  ($start_gcode !~ /M(?:109|104)/i);
     }
+    my $include_end_extruder_temp = $self->config->end_gcode !~ /M(?:109|104)/i; 
+    foreach my $end_gcode (@{ $self->config->end_filament_gcode }) { # process filament gcode in order
+        $include_end_extruder_temp = $include_end_extruder_temp &&  ($end_gcode !~ /M(?:109|104)/i);
+    }
     $self->_print_first_layer_temperature(0)
         if $include_start_extruder_temp;
     printf $fh "%s\n", Slic3r::ConditionalGCode::apply_math($gcodegen->placeholder_parser->process($self->config->start_gcode));
@@ -262,7 +266,7 @@ sub export {
                             if $self->config->between_objects_gcode !~ /M(?:109|104)/i;
                         printf $fh "%s\n", Slic3r::ConditionalGCode::apply_math($gcodegen->placeholder_parser->process($self->config->between_objects_gcode));
                     }
-                    $self->process_layer($layer, [$copy]);
+                    $self->process_layer($obj_idx, $layer, [$copy]);
                 }
                 $self->flush_filters;
                 $finished_objects++;
@@ -287,7 +291,7 @@ sub export {
         foreach my $print_z (sort { $a <=> $b } keys %layers) {
             foreach my $obj_idx (@obj_idx) {
                 foreach my $layer (@{ $layers{$print_z}[$obj_idx] // [] }) {
-                    $self->process_layer($layer, $layer->object->_shifted_copies);
+                    $self->process_layer($obj_idx, $layer, $layer->object->_shifted_copies);
                 }
             }
         }
@@ -301,6 +305,14 @@ sub export {
         printf $fh "%s\n", Slic3r::ConditionalGCode::apply_math($gcodegen->placeholder_parser->process($end_gcode));
     }
     printf $fh "%s\n", Slic3r::ConditionalGCode::apply_math($gcodegen->placeholder_parser->process($self->config->end_gcode));
+
+    $self->_print_off_temperature(0)
+        if $include_end_extruder_temp;
+    # set bed temperature
+    if (($self->config->has_heatbed) && $self->config->end_gcode !~ /M(?:190|140)/i) {
+        printf $fh $gcodegen->writer->set_bed_temperature(0, 0);
+    }
+
     print $fh $gcodegen->writer->update_progress($gcodegen->layer_count, $gcodegen->layer_count, 1);  # 100%
     print $fh $gcodegen->writer->postamble;
     
@@ -356,12 +368,22 @@ sub _print_first_layer_temperature {
     }
 }
 
+sub _print_off_temperature {
+    my ($self, $wait) = @_;
+    
+    for my $t (@{$self->print->extruders}) {
+        printf {$self->fh} $self->_gcodegen->writer->set_temperature(0, $wait, $t)
+    }
+}
+
+
+
 # Called per object's layer.
 # First a $gcode string is collected,
 # then filtered and finally written to a file $fh.
 sub process_layer {
     my $self = shift;
-    my ($layer, $object_copies) = @_;
+    my ($obj_idx, $layer, $object_copies) = @_;
     my $gcode = "";
     
     my $object = $layer->object;
@@ -522,7 +544,11 @@ sub process_layer {
         $self->_gcodegen->avoid_crossing_perimeters->set_disable_once(1);
     }
     
+    my $copy_idx = 0;
     for my $copy (@$object_copies) {
+        if ($self->config->label_printed_objects) {
+            $gcode .=   "; printing object " . $object->model_object()->name . " id:" . $obj_idx . " copy "  . $copy_idx . "\n";
+        }
         # when starting a new object, use the external motion planner for the first travel move
         $self->_gcodegen->avoid_crossing_perimeters->set_use_external_mp_once(1) if ($self->_last_obj_copy // '') ne "$copy";
         $self->_last_obj_copy("$copy");
@@ -649,6 +675,10 @@ sub process_layer {
                 }
             }
         }
+        if ($self->config->label_printed_objects) {
+            $gcode .=   "; stop printing object " . $object->model_object()->name . " id:" . $obj_idx . " copy "  . $copy_idx . "\n";
+        }
+        $copy_idx = $copy_idx + 1;
     }
     
     # apply spiral vase post-processing if this layer contains suitable geometry

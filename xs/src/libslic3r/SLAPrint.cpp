@@ -240,55 +240,56 @@ SLAPrint::slice()
 void
 SLAPrint::_infill_layer(size_t i, const Fill* _fill)
 {
-	Layer &layer = this->layers[i];
+    Layer &layer = this->layers[i];
+    
+    const float shell_thickness = this->config.get_abs_value("perimeter_extrusion_width", this->config.layer_height.value);
+    
+    // In order to detect what regions of this layer need to be solid,
+    // perform an intersection with layers within the requested shell thickness.
+    Polygons internal = layer.slices;
+    for (size_t j = 0; j < this->layers.size(); ++j) {
+        const Layer &other = this->layers[j];
+        if (std::abs(other.print_z - layer.print_z) > shell_thickness) continue;
+    
+        if (j == 0 || j == this->layers.size()-1) {
+            internal.clear();
+            break;
+        } else if (i != j) {
+            internal = intersection(internal, other.slices);
+            if (internal.empty()) break;
+        }
+    }
+    
+    // If we have no internal infill, just print the whole layer as a solid slice.
+    if (internal.empty()) return;
+    layer.solid = false;
+    
+    const Polygons infill = offset(layer.slices, -scale_(shell_thickness));
+    
+    // Generate solid infill
+    layer.solid_infill << diff_ex(infill, internal, true);
+    
+    // Generate internal infill
+    {
+        std::unique_ptr<Fill> fill(_fill->clone());
+        fill->layer_id = i;
+        fill->z        = layer.print_z;
+        
+        ExtrusionPath templ(erInternalInfill);
 
-	const float shell_thickness = this->config.get_abs_value("perimeter_extrusion_width", this->config.layer_height.value);
-
-	// In order to detect what regions of this layer need to be solid,
-	// perform an intersection with layers within the requested shell thickness.
-	Polygons internal = layer.slices;
-	for (size_t j = 0; j < this->layers.size(); ++j) {
-		const Layer &other = this->layers[j];
-		if (std::abs(other.print_z - layer.print_z) > shell_thickness) continue;
-
-		if (j == 0 || j == this->layers.size()-1) {
-			internal.clear();
-			break;
-		} else if (i != j) {
-			internal = intersection(internal, other.slices);
-			if (internal.empty()) break;
-		}
-	}
-
-	// If we have no internal infill, just print the whole layer as a solid slice.
-	if (internal.empty()) return;
-	layer.solid = false;
-
-	const Polygons infill = offset(layer.slices, -scale_(shell_thickness));
-
-	// Generate solid infill
-	layer.solid_infill << diff_ex(infill, internal, true);
-
-	// Generate internal infill
-	{
-		std::unique_ptr<Fill> fill(_fill->clone());
-		fill->layer_id = i;
-		fill->z        = layer.print_z;
-
-		ExtrusionPath templ(erInternalInfill);
-		templ.width = fill->spacing();
-		const ExPolygons internal_ex = intersection_ex(infill, internal);
-		for (ExPolygons::const_iterator it = internal_ex.begin(); it != internal_ex.end(); ++it) {
-			Polylines polylines = fill->fill_surface(Surface(stInternal, *it));
-			layer.infill.append(polylines, templ);
-		}
-	}
-
-	// Generate perimeter(s).
-	layer.perimeters << diff_ex(
-			layer.slices,
-			offset(layer.slices, -scale_(shell_thickness))
-	);
+        const ExPolygons internal_ex = intersection_ex(infill, internal);
+        for (ExPolygons::const_iterator it = internal_ex.begin(); it != internal_ex.end(); ++it) {
+            Polylines polylines = fill->fill_surface(Surface(stInternal, *it));
+            templ.width = fill->spacing(); // fill->spacing doesn't have anything defined until after fill_surface
+            layer.infill.append(polylines, templ);
+        }
+    }
+    
+    // Generate perimeter(s).
+    layer.perimeters << diff_ex(
+        layer.slices,
+        offset(layer.slices, -scale_(shell_thickness))
+    );
 }
 
 void
