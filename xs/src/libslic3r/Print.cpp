@@ -288,7 +288,7 @@ Print::invalidate_step(PrintStep step)
     
     // propagate to dependent steps
     if (step == psSkirt) {
-        invalidated |= this->invalidate_step(psBrim);
+        this->invalidate_step(psBrim);
     }
     
     return invalidated;
@@ -338,9 +338,7 @@ Print::object_extruders() const
         if ((*region)->config.fill_density.value > 0)
             extruders.insert((*region)->config.infill_extruder - 1);
         
-        if ((*region)->config.top_solid_layers.value > 0
-            || (*region)->config.bottom_solid_layers.value > 0
-            || (*region)->config.min_top_bottom_shell_thickness.value > 0)
+        if ((*region)->config.top_solid_layers.value > 0 || (*region)->config.bottom_solid_layers.value > 0)
             extruders.insert((*region)->config.solid_infill_extruder - 1);
     }
     
