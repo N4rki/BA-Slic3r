@@ -9,6 +9,7 @@ use Wx::Event qw(EVT_BUTTON EVT_CLOSE EVT_TEXT_ENTER EVT_SPINCTRL EVT_SLIDER);
 use base qw(Wx::Dialog Class::Accessor);
 use utf8;
 use FindBin; # for relative path of processing library gui
+use Cwd; # current workng drive to find drive letter
 
 __PACKAGE__->mk_accessors(qw(config config2 manual_control_config screen controller _optgroups));
 
@@ -100,13 +101,13 @@ sub new {
         # should be wxCLOSE but it crashes on Linux, maybe it's a Wx bug
         my $buttons = Wx::BoxSizer->new(wxHORIZONTAL);
         {
-            my $btn = Wx::Button->new($self, -1, "Export SVGâ€¦");
+            my $btn = Wx::Button->new($self, -1, "Export SVG…");
             EVT_BUTTON($self, $btn, sub {
                 $self->_export_svg;
             });
             $buttons->Add($btn, 0);
             
-            my $btn1 = Wx::Button->new($self, -1, "Continue in Processing Libraryâ€¦");
+            my $btn1 = Wx::Button->new($self, -1, "Continue in Processing Library…");
             EVT_BUTTON($self, $btn1, sub {
                 $self->_open_lib_exe;
             });
@@ -208,11 +209,13 @@ sub _export_svg {
     print $output_file;
     print "Output Path: $output_file \n";
     
-    $output_path1 = $output_file;
+    $output_path1 = "\"$output_file\"";
     $self->controller->_print->write_svg($output_file);
+	print STDERR "$output_path1";
 }
 
-## Calls the processing library via cmd.
+
+## Calls the processing library via cmd. Doesn't work when ran via usb drive.
  sub _open_lib_exe {
    my ($self) = @_;
     
@@ -222,6 +225,18 @@ sub _export_svg {
    $cmd .= $output_path1;
    system($cmd);   
  }
+
+ ## Calls the processing library via cmd. Provides possibillity to run from usb drive, but NOT from UNC-Directory ("\\saturn20.ipa.stuttgart...")
+ sub _open_lib_exe_usb {
+   my ($self) = @_;
+    
+   my $driveletter = substr(getcwd, 0, 2); 	
+   my $rawDataName = "cd $FindBin::Bin/processing-lib/ & $driveletter &  start \"Open Bib\" /B \"Gui.exe\" "; 
+   my $cmd = $rawDataName ;   
+   $cmd .= $output_path1;
+   system($cmd);   
+ }
+
 
 
 sub _set_status {
@@ -287,7 +302,7 @@ sub BUILD {
     
         # make sure layers were sliced
         {
-            my $progress_dialog = Wx::ProgressDialog->new('Slicingâ€¦', "Processing layersâ€¦", 100, undef, 0);
+            my $progress_dialog = Wx::ProgressDialog->new('Slicing…', "Processing layers…", 100, undef, 0);
             $progress_dialog->Pulse;
             $print->slice;
             $progress_dialog->Destroy;
@@ -632,7 +647,7 @@ sub _repaint {
             for @{union_ex($self->print->layer_infill($self->layer_num)->grow)};
     }
     
-    #Â draw support material
+    # draw support material
     my $sm_radius = $self->print->config->get_abs_value_over('support_material_extrusion_width', $self->print->config->layer_height)/2;
     $dc->SetBrush(Wx::Brush->new(wxWHITE, wxSOLID));
     foreach my $pillar (@{$self->print->sm_pillars}) {
