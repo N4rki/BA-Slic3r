@@ -217,7 +217,8 @@ sub _export_svg {
    my ($self) = @_;
     
    my $rawDataName = "$FindBin::Bin/processing-lib/Gui.exe "; 
-   my $cmd = $rawDataName;   
+
+   my $cmd = $rawDataName ;   
    $cmd .= $output_path1;
    system($cmd);   
  }
