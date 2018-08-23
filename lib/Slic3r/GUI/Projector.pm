@@ -216,7 +216,7 @@ sub _export_svg {
 
 
 ## Calls the processing library via cmd. Doesn't work when ran via usb drive.
- sub _open_lib_exe_old {
+ sub _open_lib_exe {
    my ($self) = @_;
     
    my $rawDataName = "$FindBin::Bin/processing-lib/Gui.exe "; 
@@ -225,8 +225,8 @@ sub _export_svg {
    system($cmd);   
  }
 
- ## Calls the processing library via cmd. Provides possibillity to run from usb drive.
- sub _open_lib_exe {
+ ## Calls the processing library via cmd. Provides possibillity to run from usb drive, but NOT from UNC-Directory ("\\saturn20.ipa.stuttgart...")
+ sub _open_lib_exe_usb {
    my ($self) = @_;
     
    my $driveletter = substr(getcwd, 0, 2); 	
@@ -235,6 +235,7 @@ sub _export_svg {
    $cmd .= $output_path1;
    system($cmd);   
  }
+
 
 
 sub _set_status {
