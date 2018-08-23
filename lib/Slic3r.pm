@@ -42,7 +42,7 @@ warn "Running Slic3r under Perl 5.16 is neither supported nor recommended\n"
 
 use FindBin;
 # Path to the images.
-my $varpath = decode_path($FindBin::Bin) . "/var";
+my $varpath = decode_path($FindBin::Bin) . "/res";
 if ($^O eq 'darwin' && !-d $varpath) {
     $varpath = decode_path($FindBin::Bin) . "/../Resources/var";
 }
