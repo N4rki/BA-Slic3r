@@ -975,7 +975,6 @@ ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
     modifier(other.modifier),
 	part_number(other.part_number),
     object(object)
-	modifier(other.modifier), object(object)
 {
 	this->material_id(other.material_id());
 	std::cout<< "Just parsed ModelVolume Partnumber " <<  this->part_number << " to new Model Volume" << std::endl;
