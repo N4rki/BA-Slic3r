@@ -19,7 +19,7 @@
 #define slic3r_PrintConfig_hpp_
 
 #include "libslic3r.h"
-#include "Config.hpp"
+#include "ConfigBase.hpp"
 
 #define OPT_PTR(KEY) if (opt_key == #KEY) return &this->KEY
 
@@ -646,7 +646,9 @@ class CLIConfig
     ConfigOptionBool                export_pov;
     ConfigOptionBool                export_svg;
     ConfigOptionBool                export_3mf;
+    ConfigOptionBool                gui;
     ConfigOptionBool                info;
+    ConfigOptionBool                help;
     ConfigOptionStrings             load;
     ConfigOptionString              output;
     ConfigOptionFloat               rotate;
@@ -655,6 +657,8 @@ class CLIConfig
     ConfigOptionString              save;
     ConfigOptionFloat               scale;
     ConfigOptionPoint3              scale_to_fit;
+    ConfigOptionPoint               center;
+    ConfigOptionBool                slice;
     ConfigOptionBool                threads;
     
     CLIConfig() : ConfigBase(), StaticConfig() {
@@ -671,6 +675,8 @@ class CLIConfig
         OPT_PTR(export_pov);
         OPT_PTR(export_svg);
         OPT_PTR(export_3mf);
+        OPT_PTR(gui);
+        OPT_PTR(help);
         OPT_PTR(info);
         OPT_PTR(load);
         OPT_PTR(output);
@@ -680,12 +686,15 @@ class CLIConfig
         OPT_PTR(save);
         OPT_PTR(scale);
         OPT_PTR(scale_to_fit);
+        OPT_PTR(slice);
         OPT_PTR(threads);
         
         return NULL;
     };
 };
 
+/// Iterate through all of the options and write them to a stream.
+std::ostream& print_cli_options(std::ostream& out);
 }
 
 #endif
