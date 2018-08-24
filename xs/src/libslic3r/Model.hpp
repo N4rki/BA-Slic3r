@@ -460,6 +460,11 @@ class ModelVolume
     ///< Configuration parameters specific to an object model geometry or a modifier volume,
     ///< overriding the global Slic3r settings and the ModelObject settings.
 
+    /// Input file path needed for reloading the volume from disk
+    std::string input_file; ///< Input file path
+    int input_file_obj_idx; ///< Input file object index
+    int input_file_vol_idx; ///< Input file volume index
+    
     bool modifier;  ///< Is it an object to be printed, or a modifier volume?
 
     /// Get the parent object owning this modifier volume.

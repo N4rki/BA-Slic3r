@@ -1697,7 +1697,6 @@ PrintConfigDef::PrintConfigDef()
     def->default_value = new ConfigOptionBool(false);
 
 
->>>>>>> upstream/master
     def = this->add("use_volumetric_e", coBool);
     def->label = __TRANS("Use volumetric E");
     def->tooltip = __TRANS("This experimental setting uses outputs the E values in cubic millimeters instead of linear millimeters. If your firmware doesn't already know filament diameter(s), you can put commands like 'M200 D[filament_diameter_0] T0' in your start G-code in order to turn volumetric mode on and use the filament diameter associated to the filament selected in Slic3r. This is only supported in recent Marlin.");

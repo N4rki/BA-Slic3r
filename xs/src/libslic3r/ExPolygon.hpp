@@ -42,7 +42,7 @@ class ExPolygon
     Polygons simplify_p(double tolerance) const;
     ExPolygons simplify(double tolerance) const;
     void simplify(double tolerance, ExPolygons* expolygons) const;
-    void medial_axis(double max_width, double min_width, ThickPolylines* polylines) const;
+    void medial_axis(const ExPolygon &bounds, double max_width, double min_width, ThickPolylines* polylines) const;
     void medial_axis(double max_width, double min_width, Polylines* polylines) const;
     void get_trapezoids(Polygons* polygons) const;
     void get_trapezoids(Polygons* polygons, double angle) const;
@@ -69,12 +69,6 @@ inline size_t number_polygons(const ExPolygons &expolys)
 inline ExPolygons
 operator+(ExPolygons src1, const ExPolygons &src2) {
     append_to(src1, src2);
-    return src1;
-};
-
-inline ExPolygons
-operator+=(ExPolygons src1, const ExPolygons &src2) {
-	src1 = src1 + src2;
     return src1;
 };
 
@@ -225,8 +219,8 @@ namespace boost { namespace polygon {
             return expolygon;
         }
     };
-
-
+    
+    
     template <>
     struct geometry_concept<ExPolygon> { typedef polygon_with_holes_concept type; };
 
@@ -253,7 +247,7 @@ namespace boost { namespace polygon {
               return t;
          }
     };
-
+    
     //first we register CPolygonSet as a polygon set
     template <>
     struct geometry_concept<ExPolygons> { typedef polygon_set_concept type; };
