@@ -48,6 +48,7 @@ Model::~Model()
 Model
 Model::read_from_file(std::string input_file)
 {
+<<<<<<< HEAD
 	Model model;
 
 	if (boost::algorithm::iends_with(input_file, ".stl")) {
@@ -70,6 +71,40 @@ Model::read_from_file(std::string input_file)
 		(*o)->input_file = input_file;
 
 	return model;
+=======
+    if (!boost::filesystem::exists(input_file)) {
+        throw std::runtime_error("No such file");
+    }
+    
+    Model model;
+    if (boost::algorithm::iends_with(input_file, ".stl")) {
+        IO::STL::read(input_file, &model);
+    } else if (boost::algorithm::iends_with(input_file, ".obj")) {
+        IO::OBJ::read(input_file, &model);
+    } else if (boost::algorithm::iends_with(input_file, ".amf")
+            || boost::algorithm::iends_with(input_file, ".amf.xml")) {
+        IO::AMF::read(input_file, &model);
+    } else if (boost::algorithm::iends_with(input_file, ".3mf")) {
+        IO::TMF::read(input_file, &model);
+    } else {
+        throw std::runtime_error("Unknown file format");
+    }
+    
+    if (model.objects.empty())
+        throw std::runtime_error("The supplied file couldn't be read because it's empty");
+    
+    for (ModelObjectPtrs::const_iterator o = model.objects.begin(); o != model.objects.end(); ++o)
+        (*o)->input_file = input_file;
+    
+    return model;
+>>>>>>> upstream/master
+}
+
+void
+Model::merge(const Model &other)
+{
+    for (ModelObject* o : other.objects)
+        this->add_object(*o, true);
 }
 
 ModelObject*
@@ -174,6 +209,7 @@ Model::has_objects_with_no_instances() const
 bool
 Model::add_default_instances()
 {
+<<<<<<< HEAD
 	// apply a default position to all objects not having one
 	for (ModelObjectPtrs::const_iterator o = this->objects.begin(); o != this->objects.end(); ++o) {
 		if ((*o)->instances.empty()) {
@@ -181,6 +217,17 @@ Model::add_default_instances()
 		}
 	}
 	return true;
+=======
+    // apply a default position to all objects not having one
+    bool added = false;
+    for (ModelObject* o : this->objects) {
+        if (o->instances.empty()) {
+            o->add_instance();
+            added = true;
+        }
+    }
+    return added;
+>>>>>>> upstream/master
 }
 
 // this returns the bounding box of the *transformed* instances
@@ -199,6 +246,18 @@ Model::repair()
 {
 	for (ModelObjectPtrs::const_iterator o = this->objects.begin(); o != this->objects.end(); ++o)
 		(*o)->repair();
+}
+
+void
+Model::split()
+{
+    Model new_model;
+    for (ModelObject* o : this->objects)
+        o->split(&new_model.objects);
+    
+    this->clear_objects();
+    for (ModelObject* o : new_model.objects)
+        this->add_object(*o);
 }
 
 void
@@ -278,6 +337,7 @@ Model::_arrange(const Pointfs &sizes, coordf_t dist, const BoundingBoxf* bb, Poi
 bool
 Model::arrange_objects(coordf_t dist, const BoundingBoxf* bb)
 {
+<<<<<<< HEAD
 	// get the (transformed) size of each instance so that we take
 	// into account their different transformations when packing
 	Pointfs instance_sizes;
@@ -299,6 +359,27 @@ Model::arrange_objects(coordf_t dist, const BoundingBoxf* bb)
 		(*o)->invalidate_bounding_box();
 	}
 	return true;
+=======
+    // get the (transformed) size of each instance so that we take
+    // into account their different transformations when packing
+    Pointfs instance_sizes;
+    for (const ModelObject* o : this->objects)
+        for (size_t i = 0; i < o->instances.size(); ++i)
+            instance_sizes.push_back(o->instance_bounding_box(i).size());
+    
+    Pointfs positions;
+    if (! this->_arrange(instance_sizes, dist, bb, positions))
+        return false;
+
+    for (ModelObjectPtrs::const_iterator o = this->objects.begin(); o != this->objects.end(); ++o) {
+        for (ModelInstancePtrs::const_iterator i = (*o)->instances.begin(); i != (*o)->instances.end(); ++i) {
+            (*i)->offset = positions.back();
+            positions.pop_back();
+        }
+        (*o)->invalidate_bounding_box();
+    }
+    return true;
+>>>>>>> upstream/master
 }
 
 /*  duplicate the entire model preserving instance relative positions */
@@ -330,6 +411,7 @@ Model::duplicate(size_t copies_num, coordf_t dist, const BoundingBoxf* bb)
 void
 Model::duplicate_objects(size_t copies_num, coordf_t dist, const BoundingBoxf* bb)
 {
+<<<<<<< HEAD
 	for (ModelObjectPtrs::const_iterator o = this->objects.begin(); o != this->objects.end(); ++o) {
 		// make a copy of the pointers in order to avoid recursion when appending their copies
 		ModelInstancePtrs instances = (*o)->instances;
@@ -340,6 +422,17 @@ Model::duplicate_objects(size_t copies_num, coordf_t dist, const BoundingBoxf* b
 	}
 
 	this->arrange_objects(dist, bb);
+=======
+    for (ModelObject* o : this->objects) {
+        // make a copy of the pointers in order to avoid recursion when appending their copies
+        const auto instances = o->instances;
+        for (const ModelInstance* i : instances)
+            for (size_t k = 2; k <= copies_num; ++k)
+                o->add_instance(*i);
+    }
+    
+    this->arrange_objects(dist, bb);
+>>>>>>> upstream/master
 }
 
 void
@@ -663,6 +756,14 @@ Model::align_instances_to_origin()
 	new_center.translate(-new_center.x/2, -new_center.y/2);
 	this->center_instances_around_point(new_center);
 }
+	
+void
+Model::align_to_ground()
+{
+    BoundingBoxf3 bb = this->bounding_box();
+    for (ModelObject* o : this->objects)
+        o->translate(0, 0, -bb.min.z);
+}
 
 void
 ModelObject::align_to_ground()
@@ -835,6 +936,7 @@ ModelObject::needed_repair() const
 void
 ModelObject::cut(Axis axis, coordf_t z, Model* model) const
 {
+<<<<<<< HEAD
 	// clone this one to duplicate instances, materials etc.
 	ModelObject* upper = model->add_object(*this);
 	ModelObject* lower = model->add_object(*this);
@@ -879,6 +981,60 @@ ModelObject::cut(Axis axis, coordf_t z, Model* model) const
 			}
 		}
 	}
+=======
+    // clone this one to duplicate instances, materials etc.
+    ModelObject* upper = model->add_object(*this);
+    ModelObject* lower = model->add_object(*this);
+    upper->clear_volumes();
+    lower->clear_volumes();
+    
+    // remove extension from filename and add suffix
+    if (this->input_file.empty()) {
+        upper->input_file = "upper";
+        lower->input_file = "lower";
+    } else {
+        const boost::filesystem::path p{this->input_file};
+        upper->input_file = (p.parent_path() / p.stem()).string() + "_upper";
+        lower->input_file = (p.parent_path() / p.stem()).string() + "_lower";
+    }
+    
+    for (ModelVolumePtrs::const_iterator v = this->volumes.begin(); v != this->volumes.end(); ++v) {
+        ModelVolume* volume = *v;
+        if (volume->modifier) {
+            // don't cut modifiers
+            upper->add_volume(*volume);
+            lower->add_volume(*volume);
+        } else {
+            TriangleMesh upper_mesh, lower_mesh;
+            
+            if (axis == X) {
+                TriangleMeshSlicer<X>(&volume->mesh).cut(z, &upper_mesh, &lower_mesh);
+            } else if (axis == Y) {
+                TriangleMeshSlicer<Y>(&volume->mesh).cut(z, &upper_mesh, &lower_mesh);
+            } else if (axis == Z) {
+                TriangleMeshSlicer<Z>(&volume->mesh).cut(z, &upper_mesh, &lower_mesh);
+            }
+            
+            upper_mesh.repair();
+            lower_mesh.repair();
+            upper_mesh.reset_repair_stats();
+            lower_mesh.reset_repair_stats();
+            
+            if (upper_mesh.facets_count() > 0) {
+                ModelVolume* vol    = upper->add_volume(upper_mesh);
+                vol->name           = volume->name;
+                vol->config         = volume->config;
+                vol->set_material(volume->material_id(), *volume->material());
+            }
+            if (lower_mesh.facets_count() > 0) {
+                ModelVolume* vol    = lower->add_volume(lower_mesh);
+                vol->name           = volume->name;
+                vol->config         = volume->config;
+                vol->set_material(volume->material_id(), *volume->material());
+            }
+        }
+    }
+>>>>>>> upstream/master
 }
 
 void
@@ -915,6 +1071,7 @@ ModelObject::split(ModelObjectPtrs* new_objects)
 void
 ModelObject::print_info() const
 {
+<<<<<<< HEAD
 	using namespace std;
 	cout << fixed;
 	cout << "[" << boost::filesystem::path(this->input_file).filename().string() << "]" << endl;
@@ -953,22 +1110,59 @@ ModelObject::print_info() const
 	}
 	cout << "number_of_parts =  " << mesh.stl.stats.number_of_parts << endl;
 	cout << "volume = "           << mesh.volume()                  << endl;
+=======
+    using namespace std;
+    cout << fixed;
+    cout << "[" << boost::filesystem::path(this->input_file).filename().string() << "]" << endl;
+    
+    TriangleMesh mesh = this->mesh();
+    mesh.check_topology();
+    BoundingBoxf3 bb = mesh.bounding_box();
+    Sizef3 size = bb.size();
+    cout << "size_x = " << size.x << endl;
+    cout << "size_y = " << size.y << endl;
+    cout << "size_z = " << size.z << endl;
+    cout << "min_x = " << bb.min.x << endl;
+    cout << "min_y = " << bb.min.y << endl;
+    cout << "min_z = " << bb.min.z << endl;
+    cout << "max_x = " << bb.max.x << endl;
+    cout << "max_y = " << bb.max.y << endl;
+    cout << "max_z = " << bb.max.z << endl;
+    cout << "number_of_facets = " << mesh.stl.stats.number_of_facets  << endl;
+    cout << "manifold = "   << (mesh.is_manifold() ? "yes" : "no") << endl;
+    
+    mesh.repair();  // this calculates number_of_parts
+    if (mesh.needed_repair()) {
+        mesh.repair();
+        if (mesh.stl.stats.degenerate_facets > 0)
+            cout << "degenerate_facets = "  << mesh.stl.stats.degenerate_facets << endl;
+        if (mesh.stl.stats.edges_fixed > 0)
+            cout << "edges_fixed = "        << mesh.stl.stats.edges_fixed       << endl;
+        if (mesh.stl.stats.facets_removed > 0)
+            cout << "facets_removed = "     << mesh.stl.stats.facets_removed    << endl;
+        if (mesh.stl.stats.facets_added > 0)
+            cout << "facets_added = "       << mesh.stl.stats.facets_added      << endl;
+        if (mesh.stl.stats.facets_reversed > 0)
+            cout << "facets_reversed = "    << mesh.stl.stats.facets_reversed   << endl;
+        if (mesh.stl.stats.backwards_edges > 0)
+            cout << "backwards_edges = "    << mesh.stl.stats.backwards_edges   << endl;
+    }
+    cout << "number_of_parts =  " << mesh.stl.stats.number_of_parts << endl;
+    cout << "volume = "           << mesh.volume()                  << endl;
+>>>>>>> upstream/master
 }
 
 
 ModelVolume::ModelVolume(ModelObject* object, const TriangleMesh &mesh)
-:   mesh(mesh), modifier(false), object(object)
-<<<<<<< HEAD
+
 :   mesh(mesh), input_file(""), modifier(false), object(object)
-=======
->>>>>>> gui_svgsplit_window
 {
 	this->part_number = -1;
 	// std::cout<< "Just initialized new ModelVolume with partnumber -1." << std::endl;
 	}
 
 ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
-<<<<<<< HEAD
+
 :   name(other.name),
     mesh(other.mesh),
     config(other.config),
@@ -978,10 +1172,6 @@ ModelVolume::ModelVolume(ModelObject* object, const ModelVolume &other)
     modifier(other.modifier),
 	part_number(other.part_number),
     object(object)
-=======
-:   part_number(other.part_number), name(other.name), mesh(other.mesh), config(other.config),
->>>>>>> gui_svgsplit_window
-	modifier(other.modifier), object(object)
 {
 	this->material_id(other.material_id());
 	std::cout<< "Just parsed ModelVolume Partnumber " <<  this->part_number << " to new Model Volume" << std::endl;

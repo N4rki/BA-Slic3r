@@ -387,20 +387,21 @@ TMFEditor::consume_TMF()
 }
 
 TMFEditor::~TMFEditor(){
-	delete zip_archive;
+    delete zip_archive;
 }
 
 bool
-TMF::write(Model& model, std::string output_file)
+TMF::write(const Model& model, std::string output_file)
 {
-	TMFEditor tmf_writer(std::move(output_file), &model);
-	return tmf_writer.produce_TMF();
+    Model m2{model};
+    TMFEditor tmf_writer(std::move(output_file), &m2);
+    return tmf_writer.produce_TMF();
 }
 
 bool
 TMF::read(std::string input_file, Model* model)
 {
-	if(!model) return false;
+    if(!model) return false;
 	TMFEditor tmf_reader(std::move(input_file), model);
 	return tmf_reader.consume_TMF();
 }

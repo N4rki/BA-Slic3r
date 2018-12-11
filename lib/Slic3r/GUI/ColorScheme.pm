@@ -6,7 +6,7 @@ use POSIX;
 use vars qw(@ISA @EXPORT);
 use Exporter 'import';
 our @ISA = 'Exporter';
-our @EXPORT = qw($DEFAULT_COLORSCHEME $SOLID_BACKGROUNDCOLOR @SELECTED_COLOR @HOVER_COLOR @TOP_COLOR @BOTTOM_COLOR @GRID_COLOR @GROUND_COLOR @COLOR_CUTPLANE @COLOR_PARTS @COLOR_INFILL @COLOR_SUPPORT @COLOR_UNKNOWN @BED_COLOR @BED_GRID @BED_SELECTED @BED_OBJECTS @BED_DRAGGED @BED_CENTER @BED_SKIRT @BED_CLEARANCE @BED_DARK @BACKGROUND255 @TOOL_DARK @TOOL_SUPPORT @TOOL_INFILL @TOOL_SHADE @TOOL_COLOR @BACKGROUND_COLOR @SPLINE_L_PEN @SPLINE_O_PEN @SPLINE_I_PEN @SPLINE_R_PEN );
+our @EXPORT = qw($DEFAULT_COLORSCHEME $SOLID_BACKGROUNDCOLOR @SELECTED_COLOR @HOVER_COLOR @TOP_COLOR @BOTTOM_COLOR @GRID_COLOR @GROUND_COLOR @COLOR_CUTPLANE @COLOR_PARTS @COLOR_INFILL @COLOR_SUPPORT @COLOR_UNKNOWN @BED_COLOR @BED_GRID @BED_SELECTED @BED_OBJECTS @BED_INSTANCE @BED_DRAGGED @BED_CENTER @BED_SKIRT @BED_CLEARANCE @BED_DARK @BACKGROUND255 @TOOL_DARK @TOOL_SUPPORT @TOOL_STEPPERIM @TOOL_INFILL @TOOL_SHADE @TOOL_COLOR @BACKGROUND_COLOR @SPLINE_L_PEN @SPLINE_O_PEN @SPLINE_I_PEN @SPLINE_R_PEN @rotateX90cw @rotateX90ccw @rotateX180 @rotateY90cw @rotateY90ccw @rotateY180 @rotateZ90cw @rotateZ90ccw @rotateZ180 @rotate45cw @rotate45ccw @rotateX90cwT @rotateX90ccwT @rotateY90cwT @rotateY90ccwT @rotateZ90cwT @rotateZ90ccwT @rotateZ45cwT @rotateZ45ccwT @mirrorX @mirrorY @mirrorZ );
 
 # DEFAULT values
 our $DEFAULT_COLORSCHEME   = 1;
@@ -27,6 +27,7 @@ our @BED_COLOR        = (255, 255, 255);
 our @BED_GRID         = (230, 230, 230);
 our @BED_SELECTED     = (255, 166, 128);
 our @BED_OBJECTS      = (210, 210, 210);
+our @BED_INSTANCE     = (255, 128, 128);
 our @BED_DRAGGED      = (128, 128, 255);
 our @BED_CENTER       = (200, 200, 200);
 our @BED_SKIRT        = (150, 150, 150);
@@ -34,14 +35,43 @@ our @BED_CLEARANCE    = (0, 0, 200);
 our @BACKGROUND255    = (255, 255, 255);
 our @TOOL_DARK        = (0, 0, 0);
 our @TOOL_SUPPORT     = (0, 0, 0);
-our @TOOL_INFILL      = (0, 0, 0);
+our @TOOL_INFILL      = (0, 0, 0.7);
+our @TOOL_STEPPERIM   = (0.7, 0, 0);
 our @TOOL_SHADE       = (0.95, 0.95, 0.95);
-our @TOOL_COLOR       = (0.7, 0, 0);
+our @TOOL_COLOR       = (0.9, 0.9, 0.9);
 our @SPLINE_L_PEN     = (50, 50, 50);
 our @SPLINE_O_PEN     = (200, 200, 200);
 our @SPLINE_I_PEN     = (255, 0, 0);
 our @SPLINE_R_PEN     = (5, 120, 160);
 our @BED_DARK         = (0, 0, 0);
+
+# ICONS for the Context Menu
+our @rotateX90cw      = "arrow_rotate_x_clockwise.png";
+our @rotateX90ccw     = "arrow_rotate_x_anticlockwise.png";
+our @rotateX180       = "arrow_rotate_x_clockwise.png";
+our @rotateY90cw      = "arrow_rotate_y_clockwise.png";
+our @rotateY90ccw     = "arrow_rotate_y_anticlockwise.png";
+our @rotateY180       = "arrow_rotate_y_clockwise.png";
+our @rotateZ90cw      = "arrow_rotate_z_clockwise.png";
+our @rotateZ90ccw     = "arrow_rotate_z_anticlockwise.png";
+our @rotateZ180       = "arrow_rotate_z_clockwise.png";
+our @rotate45cw       = "arrow_rotate_z_clockwise.png";
+our @rotate45ccw      = "arrow_rotate_z_anticlockwise.png";
+our @mirrorX          = 'shape_flip_horizontal_x.png';
+our @mirrorY          = 'shape_flip_horizontal_y.png';
+our @mirrorZ          = 'shape_flip_horizontal_z.png';
+
+# ICONS for the Toolbar (might be different)
+our @rotateX90cwT     = "arrow_rotate_x_clockwise.png";
+our @rotateX90ccwT    = "arrow_rotate_x_anticlockwise.png";
+our @rotateY90cwT     = "arrow_rotate_y_clockwise.png";
+our @rotateY90ccwT    = "arrow_rotate_y_anticlockwise.png";
+our @rotateZ90cwT     = "arrow_rotate_z_clockwise.png";
+our @rotateZ90ccwT    = "arrow_rotate_z_anticlockwise.png";
+our @rotateZ45cwT     = "arrow_rotate_z_clockwise.png";
+our @rotateZ45ccwT    = "arrow_rotate_z_anticlockwise.png";
+
+
 
 # S O L A R I Z E
 # # http://ethanschoonover.com/solarized
@@ -70,6 +100,12 @@ our @COLOR_GREEN     = (0.52157,0.60000,0.00000);
 sub getSolarized { # add this name to Preferences.pm
     $DEFAULT_COLORSCHEME   = 0;               # DISABLE default color scheme
     $SOLID_BACKGROUNDCOLOR = 1;               # Switch between SOLID or FADED background color
+    my $largeicons         = 0;               # Default: 0. 1 for large icons-set.
+    
+    if ($Slic3r::GUI::Settings->{_}{rotation_controls} eq 'xyz-big'){
+        $largeicons = 1;
+    }
+    
     @SELECTED_COLOR   = @COLOR_MAGENTA;       # Color of selected Model
     @HOVER_COLOR      = @COLOR_VIOLET;        # Color when hovering over Model
     # @TOP_COLOR        = @COLOR_BASE2;         # FADE Background color - only used if $SOLID_BACKGROUNDCOLOR = 0
@@ -86,7 +122,8 @@ sub getSolarized { # add this name to Preferences.pm
     # 2DBed.pm and ./plater/2D.pm colors
     @BED_COLOR        = map { ceil($_ * 255) } @COLOR_BASE2;      # do math -> multiply each value by 255 and round up
     @BED_GRID         = map { ceil($_ * 255) } @COLOR_BASE1;      # Bed, Ground or Plate
-    @BED_SELECTED     = map { ceil($_ * 255) } @SELECTED_COLOR;   # Selected Model
+    @BED_SELECTED     = map { ceil($_ * 255) } @COLOR_YELLOW;     # Selected Model
+    @BED_INSTANCE     = map { ceil($_ * 255) } @SELECTED_COLOR;   # Real selected Model
     @BED_OBJECTS      = map { ceil($_ * 255) } @COLOR_PARTS;      # Models on bed
     @BED_DRAGGED      = map { ceil($_ * 255) } @COLOR_CYAN;       # Color while dragging
     @BED_CENTER       = map { ceil($_ * 255) } @COLOR_BASE1;      # Cross hair
@@ -99,7 +136,8 @@ sub getSolarized { # add this name to Preferences.pm
     @TOOL_DARK        = @COLOR_BASE01;  # Brim/Skirt
     @TOOL_SUPPORT     = @COLOR_GREEN;   # Support
     @TOOL_INFILL      = @COLOR_BASE1;   # Infill
-    @TOOL_COLOR       = @COLOR_BLUE;    # Perimeter
+    @TOOL_COLOR       = @COLOR_BLUE;    # Real Perimeter
+    @TOOL_STEPPERIM   = @COLOR_CYAN;    # Inner Perimeter
     @TOOL_SHADE       = @COLOR_BASE2;   # Shade; model inside
     
     # Colors for *Layer heights...* dialog
@@ -107,6 +145,40 @@ sub getSolarized { # add this name to Preferences.pm
     @SPLINE_O_PEN     = map { ceil($_ * 255) } @COLOR_BASE1;   # Original color
     @SPLINE_I_PEN     = map { ceil($_ * 255) } @COLOR_MAGENTA; # Interactive color
     @SPLINE_R_PEN     = map { ceil($_ * 255) } @COLOR_VIOLET;  # Resulting color
+
+    if ($largeicons == 1){ # use large icons
+        # ICONS for the Toolbar (might be different)
+        our @rotateX90cwT     = 'solarized/arrow_rotate_x_clockwise90.png';
+        our @rotateX90ccwT    = 'solarized/arrow_rotate_x_anticlockwise90.png';
+        our @rotateY90cwT     = 'solarized/arrow_rotate_y_clockwise90.png';
+        our @rotateY90ccwT    = 'solarized/arrow_rotate_y_anticlockwise90.png';
+        our @rotateZ90cwT     = 'solarized/arrow_rotate_z_clockwise90.png';
+        our @rotateZ90ccwT    = 'solarized/arrow_rotate_z_anticlockwise90.png';
+        our @rotateZ45cwT     = 'solarized/arrow_rotate_z_clockwise45.png';
+        our @rotateZ45ccwT    = 'solarized/arrow_rotate_z_anticlockwise45.png';
+    } else {
+        # use default or small icons
+        our @rotateX90cwT     = 'solarized/arrow_rotate_x_clockwise90_16.png';
+        our @rotateX90ccwT    = 'solarized/arrow_rotate_x_anticlockwise90_16.png';
+        our @rotateY90cwT     = 'solarized/arrow_rotate_y_clockwise90_16.png';
+        our @rotateY90ccwT    = 'solarized/arrow_rotate_y_anticlockwise90_16.png';
+        our @rotateZ90cwT     = 'solarized/arrow_rotate_z_clockwise90_16.png';
+        our @rotateZ90ccwT    = 'solarized/arrow_rotate_z_anticlockwise90_16.png';
+        our @rotateZ45cwT     = 'solarized/arrow_rotate_z_clockwise45_16.png';
+        our @rotateZ45ccwT    = 'solarized/arrow_rotate_z_anticlockwise45_16.png';
+    }
+
+    our @rotateX90cw      = 'solarized/arrow_rotate_x_clockwise90_16.png';
+    our @rotateX90ccw     = 'solarized/arrow_rotate_x_anticlockwise90_16.png';
+    our @rotateX180       = 'solarized/arrow_rotate_x_180_16.png';
+    our @rotateY90cw      = 'solarized/arrow_rotate_y_clockwise90_16.png';
+    our @rotateY90ccw     = 'solarized/arrow_rotate_y_anticlockwise90_16.png';
+    our @rotateY180       = 'solarized/arrow_rotate_y_180_16.png';
+    our @rotateZ90cw      = 'solarized/arrow_rotate_z_clockwise90_16.png';
+    our @rotateZ90ccw     = 'solarized/arrow_rotate_z_anticlockwise90_16.png';
+    our @rotateZ180       = 'solarized/arrow_rotate_z_180_16.png';
+    our @rotate45cw       = 'solarized/arrow_rotate_z_clockwise45_16.png';
+    our @rotate45ccw      = 'solarized/arrow_rotate_z_anticlockwise45_16.png';
 
 }
 

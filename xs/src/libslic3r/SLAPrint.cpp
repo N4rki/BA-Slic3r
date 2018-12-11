@@ -163,6 +163,10 @@ SLAPrint::slice()
 		fill->angle         = Geometry::deg2rad(this->config.fill_angle.value);
 		fill->density       = this->config.fill_density.value/100;
 
+        // Minimum spacing has a lower bound of > 0. Set to a sane default 
+        // if the user gets an invalid value here.
+        fill->min_spacing = (fill->min_spacing <= 0 ? 0.5 : fill->min_spacing);
+
 		parallelize<size_t>(
 				0,
 				this->layers.size()-1,
@@ -286,18 +290,19 @@ SLAPrint::_infill_layer(size_t i, const Fill* _fill)
 		std::unique_ptr<Fill> fill(_fill->clone());
 		fill->layer_id = i;
 		fill->z        = layer.print_z;
+        
+        ExtrusionPath templ(erInternalInfill);
 
-		ExtrusionPath templ(erInternalInfill);
-		templ.width = fill->spacing();
-		const ExPolygons internal_ex = intersection_ex(infill, internal);
-		for (ExPolygons::const_iterator it = internal_ex.begin(); it != internal_ex.end(); ++it) {
-			Polylines polylines = fill->fill_surface(Surface(stInternal, *it));
-			layer.infill.append(polylines, templ);
-		}
-	}
-
-	// Generate perimeter(s).
-	layer.perimeters << diff_ex(
+        const ExPolygons internal_ex = intersection_ex(infill, internal);
+        for (ExPolygons::const_iterator it = internal_ex.begin(); it != internal_ex.end(); ++it) {
+            Polylines polylines = fill->fill_surface(Surface(stInternal, *it));
+            templ.width = fill->spacing(); // fill->spacing doesn't have anything defined until after fill_surface
+            layer.infill.append(polylines, templ);
+        }
+    }
+    
+    // Generate perimeter(s).
+    layer.perimeters << diff_ex(
 			layer.slices,
 			offset(layer.slices, -scale_(shell_thickness))
 	);
