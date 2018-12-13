@@ -101,13 +101,13 @@ sub new {
         # should be wxCLOSE but it crashes on Linux, maybe it's a Wx bug
         my $buttons = Wx::BoxSizer->new(wxHORIZONTAL);
         {
-            my $btn = Wx::Button->new($self, -1, "Export SVG…");
+            my $btn = Wx::Button->new($self, -1, "Export SVGâ€¦");
             EVT_BUTTON($self, $btn, sub {
                 $self->_export_svg;
             });
             $buttons->Add($btn, 0);
             
-            my $btn1 = Wx::Button->new($self, -1, "Continue in Processing Library…");
+            my $btn1 = Wx::Button->new($self, -1, "Continue in Processing Libraryâ€¦");
             EVT_BUTTON($self, $btn1, sub {
                 $self->_open_lib_exe;
             });
@@ -219,15 +219,14 @@ sub _export_svg {
  sub _open_lib_exe {
    my ($self) = @_;
     
-   my $rawDataName = "$FindBin::Bin/processing-lib/Gui.exe "; 
-
+   my $rawDataName = "$FindBin::Bin/processing-lib/3D-RIP.exe "; 
    my $cmd = $rawDataName ;   
    $cmd .= $output_path1;
    system($cmd);   
  }
 
- ## Calls the processing library via cmd. Provides possibillity to run from usb drive, but NOT from UNC-Directory ("\\saturn20.ipa.stuttgart...")
- sub _open_lib_exe_usb {
+ ## Calls the processing library via cmd. Provides possibillity to run from usb drive. 
+ sub _open_lib_exe_bug {
    my ($self) = @_;
     
    my $driveletter = substr(getcwd, 0, 2); 	
@@ -237,6 +236,19 @@ sub _export_svg {
    system($cmd);   
  }
 
+
+ ## Calls the processing library via cmd. Provides possibillity to run from usb drive. 
+ ## pushd instead of cd allows for UNC paths ("\\saturn20.ipa.stuttgart...")
+ sub _open_lib_exe_new {
+   my ($self) = @_;
+    
+   my $driveletter = substr(getcwd, 0, 2); 	
+   my $rawDataName = "pushd $FindBin::Bin/processing-lib/ & $driveletter &  start \"Open Bib\" /B \"Gui.exe\" "; 
+   my $cmd = $rawDataName ;   
+   $cmd .= $output_path1;
+   $cmd .= "& popd";
+   system($cmd);   
+ }
 
 
 sub _set_status {
@@ -302,7 +314,7 @@ sub BUILD {
     
         # make sure layers were sliced
         {
-            my $progress_dialog = Wx::ProgressDialog->new('Slicing…', "Processing layers…", 100, undef, 0);
+            my $progress_dialog = Wx::ProgressDialog->new('Slicingâ€¦', "Processing layersâ€¦", 100, undef, 0);
             $progress_dialog->Pulse;
             $print->slice;
             $progress_dialog->Destroy;
@@ -647,7 +659,7 @@ sub _repaint {
             for @{union_ex($self->print->layer_infill($self->layer_num)->grow)};
     }
     
-    # draw support material
+    #Â draw support material
     my $sm_radius = $self->print->config->get_abs_value_over('support_material_extrusion_width', $self->print->config->layer_height)/2;
     $dc->SetBrush(Wx::Brush->new(wxWHITE, wxSOLID));
     foreach my $pillar (@{$self->print->sm_pillars}) {

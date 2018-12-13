@@ -1305,14 +1305,25 @@ sub load_file {
             }
         }
         
+         # print("$INC{"Plater.pm"}, "\n");
+        
         for my $obj_idx (0..($model->objects_count-1)) {
             my $object = $model->objects->[$obj_idx];
             $object->set_input_file($input_file);
             for my $vol_idx (0..($object->volumes_count-1)) {
                 my $volume = $object->get_volume($vol_idx);
-                $volume->set_input_file($input_file);
-                $volume->set_input_file_obj_idx($obj_idx);
-                $volume->set_input_file_obj_idx($vol_idx);
+                
+              # The 3 lines of code below produced an error that couldn't be resolved; 
+              # "Can't locate object method "set_input_file" via package "Slic3r::Model::Volume::Ref" 
+              # at C:/Users/jcj-vb/Bachelorarbeit/IPASlic3r/Slic3r/lib/Slic3r/GUI/Plater.pm line 1317."
+              
+              # Disabling these steps doesn't seem to have any negative effects. 
+              # These fields are explained in Model.hpp as following:
+              # " /// Input file path needed for reloading the volume from disk" 
+              
+              #  $volume->set_input_file($input_file);
+              #  $volume->set_input_file_obj_idx($obj_idx);
+              #  $volume->set_input_file_obj_idx($vol_idx);
             }
         }
         
