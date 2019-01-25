@@ -37,3 +37,4 @@ slic3r_test
 compile_commands.json
 tags
 
+processing-lib/
